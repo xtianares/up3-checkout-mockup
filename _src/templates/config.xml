@@ -1,0 +1,13 @@
+{% set SiteUrl = "https://www.oshaeducationcenter.com" %}
+{% set LoginUrl = "loginURL_replaced_during_build" %}
+{% set CDN_Domain = "cdn_domain_replaced_during_build" %}
+
+{% set RegUrl_1197 = "registration_domain_replaced_during_build/registration/student-info-sd/?host=oshaeducationcenter.com&pid=1197&language=en" %}
+{% set RegUrl_1198 = "registration_domain_replaced_during_build/registration/student-info-sd/?host=oshaeducationcenter.com&pid=1198&language=en" %}
+
+<!-- OECA PACKAGES -->
+{% set RegUrl_pkg18 = "registration_domain_replaced_during_build/registration/student-info/?host=oshaeducationcenter.com&pkgid=18&language=en" %}
+{% set RegUrl_pkg45 = "registration_domain_replaced_during_build/registration/student-info/?host=oshaeducationcenter.com&pkgid=45&language=en" %}
+{% set RegUrl_pkg46 = "registration_domain_replaced_during_build/registration/student-info/?host=oshaeducationcenter.com&pkgid=46&language=en" %}
+{% set RegUrl_pkg47 = "registration_domain_replaced_during_build/registration/student-info/?host=oshaeducationcenter.com&pkgid=47&language=en" %}
+{% set RegUrl_pkg48 = "registration_domain_replaced_during_build/registration/student-info/?host=oshaeducationcenter.com&pkgid=48&language=en" %}

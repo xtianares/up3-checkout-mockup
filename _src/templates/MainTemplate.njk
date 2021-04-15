@@ -1,0 +1,168 @@
+{% import "config.xml" as Config %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+  <link rel="preconnect" href="apiURL_domain_replaced_during_build" crossorigin>
+  <link rel="dns-prefetch" href="apiURL_domain_replaced_during_build" crossorigin>
+  <link rel="preconnect" href="cdn_domain_replaced_during_build" crossorigin>
+  <link rel="dns-prefetch" href="cdn_domain_replaced_during_build" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com" crossorigin>
+  {# <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" crossorigin> #}
+  {# <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin> #}
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+  <link rel="dns-prefetch" href="https://code.jquery.com" crossorigin>
+  <link rel="preconnect" href="https://static.hotjar.com" crossorigin>
+  <link rel="dns-prefetch" href="https://static.hotjar.com" crossorigin>
+
+  <!-- updated this according to webfont requirements -->
+  <link rel="preload" href="/fonts/open-sans-v18-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/open-sans-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/fjalla-one-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-slab-v13-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-slab-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/open-sans-v18-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/open-sans-v18-latin-700.woff2" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/icons.woff?24804043" as="font" type="font/woff" crossorigin>
+
+  {# <link rel="preload" href="/css/bootstrap/bootstrap.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/main.css" as="style" crossorigin>
+  <link rel="preload" href="/js/bootstrap.min.js" as="script" crossorigin>
+  <link rel="preload" href="/js/main.min.js" as="script" crossorigin>
+  <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" as="script" crossorigin>
+  <link rel="preload" href="https://www.gstatic.com/wcm/loader.js" as="script" crossorigin>
+  <link rel="preload" href="{{Config.CDN_Domain}}/global/js/livechat.js" as="script" crossorigin> #}
+  {# <link rel="preload" href="https://code.jquery.com/jquery-3.5.1.slim.min.js" as="script"> #}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{PageTitle}}</title>
+  <meta name="description" content="{{PageDescription}}" />
+  <meta name="theme-color" content="#0098DA" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/asc-icon.png">
+  <link rel="canonical" href="{{Config.SiteUrl}}{{CanonicalPage}}">
+
+  {# <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style" onload="this.onload=null;this.rel='stylesheet'"> #}
+  <link rel="preload" href="/css/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- You write code for this content block in another file -->
+  {% block HeadIncludes %}{% endblock %}
+
+  <!-- Application Insights (should be listed first before other scripts) -->
+  <script type="text/javascript">
+    var appInsights=window.appInsights||function(config){
+      function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+      }({
+          instrumentationKey:"INSTRUMENTATION_KEY"
+      });
+      window.appInsights=appInsights;
+      appInsights.trackPageView();
+  </script>
+  <!-- End Application Insights (should be listed first before other scripts) -->
+
+	<!-- Anti-flicker snippet (recommended)  -->
+	<style>.async-hide{opacity:0!important}</style>
+	<script class="no-min">(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',2000,{'GTM-NCNHK6':true});</script>
+	<!-- END Anti-flicker snippet -->
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NCNHK6');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MHSTDK3');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="d-flex flex-column bg-white">
+<!-- Google Tag Manager -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCNHK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHSTDK3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<section id="timer-wrap" class=""></section>
+
+<header id="header-wrap" class="clearfix">
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div id="header" class="col-sm-12">
+        <a class="logo d-flex align-items-center" href="/">
+          <img src="/images/american-safety-council-icon.png" alt="American Safety Council" width="80" height="80" loading="lazy" />
+          <span>
+            <span class="big">UP3 Checkout</span><br>
+            <span class="small">American Safety Council, Inc.</span>
+          </span>
+        </a>
+        <div id="support">
+          <a class="login" href="{{Config.LoginUrl}}">Login</a>
+          <p>
+            <span class="phone">Call Us: <strong><a href="tel:18003931063">1-800-393-1063</a></strong></span>
+            <a class="livechat" href="javascript://Chat" onclick="StartLiveChat()">Live Chat</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "./partials/Navbar.njk" %}
+</header>
+
+{% block MainContent %}{% endblock %}
+
+<footer id="footer-wrap" class="footer mt-auto">
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div id="footer" class="col-sm-12 text-center">
+        <p class="trustmark">
+          <a href="https://sealserver.trustwave.com/cert.php?customerId=467c44ce96744facaf7102074ba1e116&size=105x54&style=invert" target="_blank" rel="noreferrer"><img id="trustwaveSealImage" src="{{Config.CDN_Domain}}/global/images/trustwave-seal.png" alt="Trustwave Validated" width="105" height="54" loading="lazy" /></a>
+          <a href="https://www.bbb.org/central-florida/business-reviews/schools-academic-special-education/american-safety-council-in-orlando-fl-144227670#sealclick" target="_blank" rel="noreferrer"><img class="bbb" src="{{Config.CDN_Domain}}/global/images/bbb.png" alt="Better Business Bureau Accredited Business" width="106" height="51" loading="lazy" /></a>
+        </p>
+
+        <p class="center links">
+          <a href="/">Home</a> |
+          <a href="/course-catalog/">Course Catalog</a> |
+          <a href="/faqs/">FAQs</a> |
+          <a href="/contact-us/">Contact Us</a> |
+          <a href="/terms-and-conditions/">Terms &amp; Conditions</a> |
+          <a href="/privacy-policy/">Privacy Policy</a> |
+          <a href="/refund-policy/">Refund Policy</a> |
+          <a href="/promo-codes/">Promo Codes</a>
+        </p>
+        <p class="center">"OSHA Education Center®" is a servicemark of American Safety Council, Inc.<br>Copyright &#169; <span class="footer-year"></span>, American Safety Council, Inc. All Rights Reserved.</p>
+        <p class="center clear">
+          <a class="social facebook" href="https://www.facebook.com/AmericanSafetyCouncil" title="Like Us in Facebook"><span class="icon-facebook"></span></a>
+          <a class="social twitter" href="https://twitter.com/AMERSC" title="Follow Us in Twitter"><span class="icon-twitter"></span></a>
+          <a class="social linkedin" href="http://www.linkedin.com/company/american-safety-council-inc" title="Connect with Us in LinkedIn"><span class="icon-linkedin"></span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- bootstrap JS files -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<!-- our custom JS files -->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.min.js"></script>
+
+<!-- Start chat script -->
+<script type="text/javascript" id="five9_chat" data-profile="Chat Frontend" src="{{Config.CDN_Domain}}/global/js/livechat.js"></script>
+<!-- End chat script -->
+
+<!-- You write code for this content block in another file -->
+{% block FooterIncludes %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+  {{ super() }}
+
+  <main class="wrap">
+    <div class="container-fluid but-fixed">
+      <div class="row justify-content-center">
+        <article class="col-12 col-lg-8">
+          {% block Content %}{% endblock %}
+        </article>
+        <aside class="col-sm-10 col-md-8 col-lg-4">
+          {% include "./partials/Sidebar.njk" %}
+        </aside>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

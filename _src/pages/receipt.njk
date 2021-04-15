@@ -1,0 +1,193 @@
+{% set PageTitle = "UP3 Checkout Template" %}
+{% set PageDescription = "Static Nunjucks Starter Template" %}
+{% set CanonicalPage = "/inner-page/" %}
+
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+
+<main class="wrap pt-0">
+  <div class="header-wrap py-2 py-md-4">
+    <div class="container-fluid but-fixed">
+      <div class="row justify-content-center">
+        <header class="header-wrap col-12 d-flex align-items-center justify-content-between">
+          <h1 class="mb-0">Order Confirmation</h1>
+          <button class="print-page-btn btn btn-outline-primary" type="button" onclick="window.print()">Print Your Receipt</button>
+        </header>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid but-fixed">
+    <div class="row justify-content-center">
+      <article class="col-12 col-lg-12">
+        <h2 class="section-header mt-3 mt-md-4 mb-2 mb-sm-3">Thanks For Your Order!</h2>
+        <p>We sent an email to <strong class="text-primary">text@test.com</strong> with your order confirmation and receipt. If the email hasn't arrive within five minutes, please check your span folder to see if the email was routed there.</p>
+        <p>An email with your redemption codes will also be sent to <strong class="text-primary">text@test.com</strong> within the hour.</p>
+        <h3 class="section-header mt-4">Carefully Review!</h3>
+        <p>If any of the information below is incorrect, please contact customer support.</p>
+        {# <div class="receipt-action d-flex justify-content-between mb-3">
+          <p class="mb-0">Order ID#: <strong class="order-id-display">18246236</strong></p>
+          <button class="print-page-btn btn btn-outline-primary" type="button" onclick="window.print()">Print Your Receipt</button>
+        </div> #}
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="card order-summary receipt mb-3">
+              <div class="card-body px-3 pt-3 pb-1">
+                <h4 class="card-title">Order ID#: <strong class="text-primary">18246236</strong></h4>
+                <ul class="list-group list-group-flush border-top">
+                  <li class="list-group-item">
+                    <div class="item-details">
+                      <strong>10-Hour OSHA Outreach Training Course for the Construction Industry</strong>
+                      <ul class="more-details-list">
+                        <li class="item-detail">10-Hour Construction Study Guide ($14.95)</li> 
+                      </ul>
+                    </div>
+                    <div class="item-qty-display text-right">x <span class="item-qty">2</span></div>
+                    <div class="item-amount text-right">
+                      <strong>$93.95</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-details">
+                      <strong>OSHA Education Center Association Membership</strong>
+                    </div>
+                    <div class="item-qty text-right">
+                      <span class="item-qty-display">x <span class="item-qty">2</span></span>
+                    </div>
+                    <div class="item-amount text-right">
+                      <strong>$49.95</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-details">
+                      <strong>New York DMV Approved Defensive Driving Course</strong>
+                      <ul class="more-details-list">
+                        <li class="item-detail">Rush Certificate Processing ($4.95)</li> 
+                        <li class="item-detail">Streaming Upgrade ($9.95)</li> 
+                        <li class="item-detail">New York Defensive Driving Study Guide ($6.95)</li> 
+                      </ul>
+                    </div>
+                    <div class="item-qty text-right">
+                      <span class="item-qty-display">x <span class="item-qty">2</span></span>
+                    </div>
+                    <div class="item-amount text-right">
+                      <strong>$46.80</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-details">
+                      <strong>Premier Pass Customer Benefits</strong>
+                    </div>
+                    <div class="item-qty text-right">
+                      <span class="item-qty-display">x <span class="item-qty">1</span></span>
+                    </div>
+                    <div class="item-amount text-right">
+                      <strong>$2.95</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item subtotal">
+                    <div class="item-details order-tally text-right">Subtotal</div>
+                    <div class="item-amount text-right">$193.65</div>
+                  </li>
+                  <li class="list-group-item shipping">
+                    <div class="item-details order-tally text-right">Shipping & Handling</div>
+                    <div class="item-amount text-right">FREE</div>
+                  </li>
+                  <li class="list-group-item tax">
+                    <div class="item-details order-tally text-right">Tax</div>
+                    <div class="item-amount text-right">$0.00</div>
+                  </li>
+                  <li class="list-group-item promo-code">
+                    <div class="item-details order-tally text-right">Promo Code: <strong class="promo-code-details">universal</strong></div>
+                    <div class="item-amount text-right">- $5.00</div>
+                  </li>
+                  <li class="list-group-item total">
+                    <div class="item-details order-tally text-right">Total</div>
+                    <div class="item-amount text-right">$188.65</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="card order-summary mb-3">
+              <div class="card-body px-3 pt-3 pb-1">
+                <h4 class="card-title">Payment Details</h4>
+                <ul class="list-group list-group-flush border-top">
+                  <li class="list-group-item">
+                    <div class="item-label">
+                      <span>Email Address:</span>
+                    </div>
+                    <div class="text-right">
+                      <strong>text@test.com</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-label">
+                      <span>Full Name on Card:</span>
+                    </div>
+                    <div class="text-right">
+                      <strong>Test Test</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-label">
+                      <span>Card Type:</span>
+                    </div>
+                    <div class="text-right">
+                      <strong>Visa</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-label">
+                      <span>Card Number:</span>
+                    </div>
+                    <div class="text-right">
+                      <strong>XXXXXXXXXXXX1111</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-label">
+                      <span>Expiration Date:</span>
+                    </div>
+                    <div class="text-right">
+                      <strong>4/2022</strong>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="item-label">
+                      <span>Reference Number:</span>
+                    </div>
+                    <div class="text-right">
+                      <strong>6185004539526758704012</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="section-header mt-3">Login Or Create An Account</h3>
+        <p>To start using your registration codes please click the button below.</p>
+        <p><a href="https://myaccount.uceusa.com/orders/redeem/" class="checkout-btn btn btn-success mr-md-auto order-md-3">Redeem Codes</a></p>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+<script>
+  const bodyTag = document.getElementsByTagName("body");
+  const bulkOrderClass = "bulk-order";
+  if ( sessionStorage.getItem("orderType") === "bulk" ) {
+    bodyTag[0].classList.add(bulkOrderClass);
+  }
+  else {
+    bodyTag[0].classList.remove(bulkOrderClass);
+  }
+</script>
+
+{% endblock %}

@@ -1,0 +1,310 @@
+/* ----------------------------------------------------------------------------
+  Navigation Menu
+----------------------------------------------------------------------------- */
+#nav-wrap {
+  background: $theme-primary;
+}
+#menutoggle {
+  display: block;
+  margin: 0;
+  padding: 0 22px;
+  width: auto;
+  color: #fff;
+  background: $theme-primary;
+  height: 45px;
+  font-size: 18px;
+  line-height: 46px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px 4px 0 0;
+  transition: background 0.2s linear 0s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  span {
+      display: none;
+  }
+  &::before {
+    display: inline-block;
+    margin-left: 0;
+    width: 18px;
+    height: 45px;
+    line-height: 48px;
+    content: "\e826";
+    color: inherit;
+    font-family: 'icons';
+    text-align: center;
+    font-size: 21px;
+    vertical-align: top;
+  }
+  &.is-active:before {
+    content: "\e844";
+  }
+  &:hover, &:active, &.is-active {
+    background-color: lighten($theme-primary, 7.5%);
+    border-radius: 4px 4px 0 0;
+  }
+  &.is-active + ul {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.3s ease-in-out, opacity 0.25s ease-in-out;
+  }
+}
+#nav {
+  clear: both;
+  margin: 0;
+  width: 100%;
+  height: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 1000;
+  border-top: 1px solid $theme-primary;
+  ul {
+    float: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    opacity: 0;
+    max-height: 0;
+    background: $theme-primary;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0, 0.7, 0, 1), opacity 0.2s ease-in-out;
+    border-radius: 0 0 4px 4px;
+    top: 1px;
+    border: 0;
+    position: relative;
+    &.submenu {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-height: 0;
+      background: none;
+      opacity: 1;
+      position: relative;
+      top: 0;
+      transition: max-height 0.15s linear 0s;
+      a {
+        padding-left: 40px;
+        background: none;
+        &:before {
+          display: inline-block;
+          margin-right: 5px;
+          margin-left: -15px;
+          width: 10px;
+          height: inherit;
+          content: "\00BB";
+          color: inherit;
+          font-family: 'icons';
+          text-align: center;
+          font-size: inherit;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+  li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow: hidden;
+    border: 0;
+    border-top: 1px dotted lighten($theme-primary, 7.5%);
+    &:first-child {
+      border-top: 0;
+    }
+    &.onmobile {
+      display: block;
+    }
+  }
+  a, span.submenu {
+    float: none;
+    display: block;
+    margin: 0;
+    padding: 9px 20px;
+    height: auto;
+    color: #fff;
+    line-height: 1.6em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    border: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition: background 0.17s linear 0s;
+  }
+  span.submenu:after, a.submenu:after {
+    float: right;
+    margin-left: 10px;
+    width: 15px;
+    height: inherit;
+    content: "\e817";
+    color: inherit;
+    font-family: 'icons';
+    text-align: center;
+    font-size: 105%;
+    vertical-align: top;
+  }
+  span.submenu.is-active, a.submenu.is-active {
+    border-bottom: 1px dotted lighten($theme-primary, 7.5%);
+    + ul.submenu {
+      max-height: 360px;
+      overflow-y: auto;
+    }
+  }
+  span.submenu.is-active:after, a.submenu.is-active:after {
+    content: "\e816";
+  }
+  a:hover, a.is-active, li:hover span.submenu, li:hover a.submenu, ul.submenu a:hover, ul.submenu a.is-active {
+    background: lighten($theme-primary, 7.5%);
+  }
+}
+
+@media (min-width: 36em) { /* Small devices (landscape phones, 576px and up) */
+/*@media (min-width: 48em) { /* Medium devices (tablets, 768px and up) */
+  #menutoggle {
+    padding: 0 15px 0 15px;
+    span {
+      display: inline-block;
+    }
+    &:before {
+      margin-right: 10px;
+    }
+  }
+}
+@media (min-width: 62em) { /* Large devices (desktops, 992px and up) */
+  #menutoggle {
+    display: none;
+  }
+  #nav {
+    height: 45px;
+    background: $theme-primary;
+    position: relative;
+    z-index: 99;
+    border: 0;
+    border-radius: 4px;
+    ul {
+      display: block !important;
+      float: left;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      margin: 4px 0;
+      position: relative;
+      z-index: 10;
+      top: 0;
+      overflow: visible;
+      &.submenu {
+        float:left;
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        max-height: 0;
+        position: absolute;
+        opacity: 0;
+        background: lighten($theme-primary, 7.5%);
+        top: 95%;
+        z-index: 10;
+        border-radius: 0 3px 3px 3px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        transition: max-height 0.2s linear 0s, padding 0.2s linear 0s, opacity 0.2s linear 0s;
+        overflow: hidden;
+        overflow-y: auto;
+        li {
+          float: none;
+          display: block;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          height: auto;
+          &:first-child a {
+            border: 0;
+          }
+        }
+        a {
+          float: none;
+          display: block;
+          margin: 0;
+          padding: 7px 15px 7px 28px;
+          height: auto;
+          text-transform: none;
+          text-align: left;
+          line-height: 1.5em;
+          border-radius: 0;
+          border: 0;
+          border-top: 1px dotted $theme-primary;
+        }
+      }
+    }
+    li {
+      float: left;
+      margin: 0 5px;
+      padding: 0;
+      height: 37px;
+      width: auto;
+      min-width: auto;
+      position: relative;
+      border: 0;
+      overflow: visible;
+      &:first-child {
+        margin-left: 0;
+        border-left: 0;
+      }
+      &.last {
+        border-right: 0;
+      }
+      &.right {
+        float: right;
+        margin-right: 0;
+        border-right: 0;
+      }
+      &.onmobile {
+        display: none;
+      }
+      &:hover {
+        z-index: 11;
+      }
+    }
+    a, span.submenu {
+      float: left;
+      margin: 0;
+      padding: 0 14px;
+      height: 37px;
+      border: 0;
+      color: #fff;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 39px;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: background 0.2s linear 0s;
+      cursor: pointer;
+    }
+    span.submenu:after, a.submenu:after {
+      display: none;
+    }
+    a:hover, a.is-active, li:hover span.submenu, li:hover a.submenu, li:hover a.submenu, ul.submenu a:hover, span.submenu.is-active, a.submenu.is-active {
+      background: lighten($theme-primary, 7.5%);
+    }
+    li:hover a.submenu, li:hover span.submenu, li:hover a.submenu, span.submenu.is-active.hover, a.submenu.is-active.hover {
+      border-radius: 3px 3px 0 0;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    li:hover ul.submenu, ul.submenu.is-active {
+      padding: 3px 0;
+      left: 0;
+      max-height: 360px;
+      opacity: 1;
+    }
+    ul.submenu li a:hover, ul.submenu li a.is-active {
+      background: $theme-primary;
+    }
+  }
+}

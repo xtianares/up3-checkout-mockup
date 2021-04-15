@@ -1,0 +1,41 @@
+{
+  "name": "static-nunjucks-starter",
+  "version": "1.0.0",
+  "description": "Static Nunjucks Starter Template",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "gulp -v"
+  },
+  "author": "Christian Castanares",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "bootstrap": "^4.6.0",
+    "critical": "^2.0.6",
+    "fs-extra": "^9.1.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-inline": "^1.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sitemap": "^7.7.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-webp": "^4.0.1",
+    "gulp-webserver": "^0.9.1",
+    "workbox-build": "^5.1.4"
+  }
+}

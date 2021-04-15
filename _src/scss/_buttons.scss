@@ -1,0 +1,208 @@
+/* ----------------------------------------------------------------------------
+	Buttons
+----------------------------------------------------------------------------- */
+.cta-btn {
+  display: inline-block;
+  padding: 10px 0 8px 0;
+  color: #fff;
+  background-color: $cta-dark;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  line-height: 1.35;
+  font-size: 21px;
+  font-weight: normal;
+  font-family: 'Fjalla One', Impact, Verdana;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: 0;
+  overflow: hidden;
+  transition: background-color .10s ease-in-out .05s;
+
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, darken($cta-dark, 10) 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+  }
+  &:active:after {
+    transform: scale(0,0);
+    opacity: .2;
+    transition: 0s;
+  }
+}
+.cta-btn.fancy {
+  background: $cta-dark;
+  background-image: linear-gradient(lighten($cta-dark, 8), darken($cta-dark, 10));
+}
+.cta-btn:hover, .cta-btn:active {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: darken($cta-dark, 7);
+  border: 0;
+}
+.cta-btn.big {
+  padding: 13px 0 10px 0;
+}
+.cta-btn.big.outline {
+  padding: 12px 0 9px 0;
+}
+.cta-btn.small {
+  padding: 9px 0 7px 0;
+  font-size: 18px;
+}
+.cta-btn.small.fancy {
+  line-height: 41px;
+}
+.cta-btn.small.outline {
+  padding: 8px 0 6px 0;
+}
+.cta-btn.dark {
+  color: #fff;
+  background: $cta-dark;
+}
+.cta-btn.orange {
+  color: #fff;
+  background: $cta-orange;
+}
+.cta-btn.yellow {
+  color: #333;
+  background: $cta-yellow;
+}
+.cta-btn.green {
+  color: #fff;
+  background: $cta-green;
+}
+.cta-btn.red {
+  color: #fff;
+  background: $cta-red;
+}
+.cta-btn.blue {
+  color: #fff;
+  background: $cta-blue;
+}
+.cta-btn[class~=outline] {
+  border: 1px solid $cta-dark;
+}
+.cta-btn.outline {
+  color: $cta-dark;
+  background: transparent;
+  border-color: $cta-dark;
+}
+.cta-btn.dark.outline {
+  color: $cta-dark;
+  background: transparent;
+  border-color: $cta-dark;
+}
+.cta-btn.orange.outline {
+  color: $cta-orange;
+  background: transparent;
+  border-color: $cta-orange;
+}
+.cta-btn.green.outline {
+  color: $cta-green;
+  background: transparent;
+  border-color: $cta-green;
+}
+.cta-btn.red.outline {
+  color: $cta-red;
+  background: transparent;
+  border-color: $cta-red;
+}
+.cta-btn.yellow.outline {
+  color: $cta-yellow;
+  background: transparent;
+  border-color: $cta-yellow;
+}
+.cta-btn.blue.outline {
+  color: $cta-blue;
+  background: transparent;
+  border-color: $cta-blue;
+}
+.cta-btn.pill {
+  border-radius: 100px;
+}
+.cta-btn.dark.fancy {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  background: $cta-dark;
+  background-image: linear-gradient(lighten($cta-dark, 8), darken($cta-dark, 10));
+}
+.cta-btn.dark:hover, .cta-btn.dark:active {
+  background: darken($cta-dark, 7);
+}
+.cta-btn.outline:hover, .cta-btn.outline:active, .cta-btn.dark.outline:hover, .cta-btn.dark.outline:active {
+  background: rgba($cta-dark, 0.1);
+}
+.cta-btn.orange.fancy {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: $cta-orange;
+  background-image: linear-gradient(lighten($cta-orange, 8), darken($cta-orange, 5));
+}
+.cta-btn.orange:hover, .cta-btn.orange:active {
+  background: darken($cta-orange, 7);
+}
+.cta-btn.orange.outline:hover, .cta-btn.orange.outline:active {
+  background: rgba($cta-orange, 0.1);
+}
+.cta-btn.green.fancy {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  background: $cta-green;
+  background-image: linear-gradient(lighten($cta-green, 8), darken($cta-green, 5));
+  color: #fff;
+}
+.cta-btn.green:hover, .cta-btn.green:active {
+  background: darken($cta-green, 7);
+}
+.cta-btn.green.outline:hover, .cta-btn.green.outline:active {
+  background: rgba($cta-green, 0.1);
+}
+.cta-btn.red.fancy {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  background: $cta-red;
+  background-image: linear-gradient(lighten($cta-red, 8), darken($cta-red, 5));
+}
+.cta-btn.red:hover, .cta-btn.red:active {
+  background: darken($cta-red, 7);
+}
+.cta-btn.red.outline:hover, .cta-btn.red.outline:active {
+  background: rgba($cta-red, 0.1);
+}
+.cta-btn.blue.fancy {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  background: $cta-blue;
+  background-image: linear-gradient(lighten($cta-blue, 8), darken($cta-blue, 5));
+}
+.cta-btn.blue:hover, .cta-btn.blue:active {
+  background: lighten($cta-blue, 7);
+}
+.cta-btn.blue.outline:hover, .cta-btn.blue.outline:active {
+  background: rgba($cta-blue, 0.1);
+}
+.cta-btn.yellow.fancy {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: $cta-yellow;
+  background-image: linear-gradient(lighten($cta-yellow, 10), darken($cta-yellow, 5));
+}
+.cta-btn.yellow:hover, .cta-btn.yellow:active {
+  background: lighten($cta-yellow, 7);
+}
+.cta-btn.yellow.outline:hover, .cta-btn.yellow.outline:active {
+  background: rgba($cta-yellow, 0.1);
+}

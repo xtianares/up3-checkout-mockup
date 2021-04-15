@@ -1,0 +1,27 @@
+{
+  "name": "OshaEducationCenter.com",
+  "short_name": "OSHA Education Center",
+  "description": "OSHA 10-Hour and 30-Hour training online for the construction and general industry. Get wallet card, certificate! We also provide bulk discounts for groups or multiple sign-ups.",
+  "icons": [
+    {
+      "src": "/images/asc-icon.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/asc-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/asc-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#004dc1",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "natural",
+  "start_url": "/"
+}

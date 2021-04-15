@@ -1,0 +1,118 @@
+/* ----------------------------------------------------------------------------
+	Countdown Timer
+----------------------------------------------------------------------------- */
+#timer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 35px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  &.hidden {
+    display: none !important;
+  }
+  a {
+    color: inherit;
+    border-width: 0 0 1px 0;
+    border-style: dotted
+  }
+  .hide-icon {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .timer-message {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  .timer-element {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    .timer-display {
+      float: left;
+      min-width: 55px;
+      height: 60px;
+      margin: 0 3px;
+      position: relative;
+      line-height: 20px;
+      text-align: center;
+    }
+    .timer-digit {
+      float: left;
+      padding: 0 9px;
+      min-width: 55px;
+      height: 35px;
+      font-size: 24px;
+      line-height: 34px;
+      border: 1px solid #555;
+      overflow: hidden;
+      color: #444;
+      background: #fff;
+      text-align: center;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    .timer-label {
+      position: relative;
+      display: block;
+      font-size: 12px;
+      color: #777;
+    }
+  }
+  .mobile {
+    display: inline-block;
+  }
+  .on-desktop {
+    display: none;
+  }
+}
+
+/*-- custom css per page -- */
+@media (min-width: 34.375em) { /* Small devices (landscape phones, 549px and up) - col-sm-* */
+
+}
+@media (min-width: 48em) { /* Medium devices (tablets, 768px and up) - col-md-* */
+
+}
+@media (min-width: 850px) { /* Medium devices (tablets, 768px and up) - col-md-* */
+    #timer-element {
+        float: right;
+        padding-top: 7px;
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 56.25em) { /* roughtly 900px/16px */
+  #timer-wrap {
+    .on-desktop {
+      display: inline-block;
+    }
+    .on-mobile {
+      display: none;
+    }
+  }
+
+}
+@media (min-width: 62em) { /* Large devices (desktops, 992px and up) - col-lg-* */
+
+}
+@media (min-width: 64em) { /* Large devices (desktops, 1024px and up) */
+
+}
+@media (min-width: 72.5em) { /* Extra large devices (large desktops, 1160px and up) */
+
+}
+@media (min-width: 75em) { /* Extra large devices (large desktops, 1200px and up) - col-xl-* */
+
+}
