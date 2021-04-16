@@ -246,17 +246,54 @@ input::placeholder{
 .custom-control {
   &.is-invalid, &:invalid {
     .custom-control-input ~ .custom-control-label {
-      color: var(--red);
+      color: $red;
     }
     .custom-control-input ~ .custom-control-label:before {
-      border-color: var(--red);
+      border-color: $red;
     }
     .custom-control-input:focus ~ .custom-control-label:before {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
     }
   }
+  &.custom-checkbox {
+    padding-left: 1.75rem;
+    .custom-control-label {
+      &:before,
+      &:after {
+        left: -1.75rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+    .custom-control-input:checked ~ .custom-control-label {
+      &:before {
+        border-color: $blue;
+        background-color: $blue;
+      }
+    }
+  }
+  &.custom-radio {
+    padding-left: 1.75rem;
+    .custom-control-label {
+      &:before,
+      &:after {
+        left: -1.75rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+    .custom-control-input:checked ~ .custom-control-label {
+      &:before {
+        border-color: $blue;
+        background-color: $blue;
+      }
+    }
+  }
 }
 .form-control {
+  &.is-invalid {
+    border-color: $red;
+  }
   &:invalid:focus, &.is-invalid:focus {
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -264,6 +301,9 @@ input::placeholder{
   }
 }
 .custom-select {
+  &.is-invalid {
+    border-color: $red;
+  }
   &:invalid:focus, &.is-invalid:focus {
     border-color: #80bdff;
     box-shadow: none;
@@ -285,11 +325,18 @@ input::placeholder{
     }
   }
 }
-
 .list-group-item {
   margin-top: 0;
   margin-bottom: 0;
 }
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1200px;
+  }
+}
+
+
 
 /* ----------------------------------------------------------------------------
   ASC Default stuff
@@ -453,13 +500,6 @@ input::placeholder{
   &.lga-replaced {
     display: inline;
     opacity: 1;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1200px;
   }
 }
 
