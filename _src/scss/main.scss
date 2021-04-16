@@ -34,7 +34,7 @@ body {
   padding-top: 20px;
   padding-bottom: 15px;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #F6F9FC;
   color: #999999;
   border-top: 1px solid #e4e4e4;
   font-size: .9rem;
@@ -171,9 +171,13 @@ body {
     Checkout styles
 ----------------------------------------------------------------------------- */
 .header-wrap {
-  background-color: #D4EFE2;
+  background-color: #84fab0;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  // background-image: linear-gradient(to right, rgba(67, 233, 123, 0.5), rgba(56, 249, 215, 0.5));
   h1 {
-    color: #26B16D;
+    // color: #26B16D;
+    color: #fff;
+    text-shadow: 1px 2px 2px rgba(0,0,0,.125);
     font-weight: 600;
   }
 }
@@ -226,23 +230,20 @@ aside {
     }
     &:checked + .self-bulk-btn {
       opacity: 1;
-      border: 1px solid $secondary;
+      border: 1px solid #316ce8;
       &:before {
-        border-color: $secondary;
-        background-color: $secondary;
+        border-color: #316ce8;
+        background-color: #316ce8;
       }
       &:after {
         position: absolute;
         width: 20px;
         height: 20px;
-        content: "\e840";
-        font-family: "icons";
-        font-style: normal;
-        font-weight: normal;
-        font-size: .85em;
-        color: #fff;
-        top: 51%;
-        left: .975rem;
+        content: "";
+        top: 50%;
+        left: .75rem;
+        background: 50%/50% 65% no-repeat;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
         transform: translateY(-50%);
       }
     }
@@ -299,6 +300,7 @@ aside {
 }
 .card {
   &.product {
+    transition: box-shadow .15s ease-in-out;
     &:hover {
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -307,7 +309,7 @@ aside {
         label {
           color: #555;
           font-weight: normal;
-          line-height: 1.4;
+          // line-height: 1.4;
         }
       }
     }
@@ -369,6 +371,7 @@ aside {
           &:focus {
             text-decoration: none;
             border-bottom: 1px dotted inherit;
+            color:  $green !important;
           }
           &:before {
             margin-top: 3px;
@@ -390,6 +393,17 @@ aside {
 .checkout-btn {
   min-width: 250px;
   font-weight: 600;
+  background-image: linear-gradient(120deg,#316ce8 0,#188ef4);
+  // background-image: linear-gradient(120deg,#1dc8cc 0,#2cdd9b);
+  transition: background-image .15s ease-in-out;
+  border: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,.125);
+  box-shadow: 0px 2px 5px rgba(60,66,87,0.2),0px 1px 1px rgba(0,0,0,0.1);
+  &:hover {
+    border: 0;
+    background-image: linear-gradient(120deg,#188ef4 0,#316ce8);
+    // background-image: linear-gradient(120deg,#2cdd9b 0,#1dc8cc);
+  }
 }
 .btn-wrap {
   margin-top: 2rem;
@@ -598,22 +612,12 @@ body.bulk-order {
           position: absolute;
           width: 25px;
           height: 25px;
-          content: "";
-          border-radius: .25rem;
-          border: 1px solid #cccccc;
-          top: 50%;
-          left: .75rem;
-          transform: translateY(-50%);
         }
       }
       &:checked + .self-bulk-btn {
         &:after {
           width: 25px;
           height: 25px;
-          font-size: 1em;
-          top: 52%;
-          left: 1.05rem;
-          transform: translateY(-50%);
         }
       }  
     }
@@ -708,4 +712,21 @@ body.bulk-order {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
 
+}
+
+// Print stylesheet, will hide the header and the footer
+@media print {
+  .no-print {
+      display: none;
+  }
+  .print-only {
+      display: block;
+  }
+  #header-wrap,
+  #footer-wrap {
+    display: none;
+  }
+  .checkout-btn {
+    border: 1px solid #ccc;
+  }
 }
