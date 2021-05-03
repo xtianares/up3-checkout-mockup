@@ -36,14 +36,14 @@
           <div class="col-sm-8">
             <div class="custom-control custom-checkbox course-upgrade">
               <input type="checkbox" class="custom-control-input" id="terms">
-              <label class="custom-control-label" for="terms"><span>I agree to the <strong><a href="#">Terms and Conditions</a></strong></span></label>
+              <label class="custom-control-label" for="terms"><span>I agree to the <strong><a href="#" data-toggle="modal" data-target="#terms-and-conditions">Terms and Conditions</a></strong></span></label>
             </div>
           </div>
         </div>
         <div class="form-row form-group d-flex align-items-center">
           <label class="text-sm-right col-sm-3 col-form-label" for="i-agree">Type <strong>I Agree</strong></label>
           <div class="col-sm-4"><input class="form-control" name="i-agree" id="i-agree" type="text" data-hj-masked></div>
-          <div class="col-sm-5 my-2"><a href="#"><strong>View Terms and Conditions</strong></a></div>
+          <div class="col-sm-5 my-2"><a href="#" data-toggle="modal" data-target="#terms-and-conditions"><strong>View Terms and Conditions</strong></a></div>
         </div>
         
         <h3 class="section-header mt-4 mt-sm-4 mb-2 mb-sm-4">Billing and Payment Info</h3>
@@ -196,6 +196,18 @@
 {% endblock %}
 
 {% block FooterIncludes %}
+<div class="modal fade" id="terms-and-conditions" data-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body p-4">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3>Terms and Conditions</h3>
+        <p class="mb-0">Terms and conditions contentr goes here. This will be dynamic content that will be pulled for each PID or could be a general terms and condition.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   const bodyTag = document.getElementsByTagName("body");
   const bulkOrderClass = "bulk-order";
@@ -217,7 +229,6 @@
       moreDetailsBtn.classList.toggle(itemDetailsClass)
     })
   }
-
 </script>
 
 {% endblock %}
