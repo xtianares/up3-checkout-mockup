@@ -36,6 +36,10 @@
     "gulp-util": "^3.0.8",
     "gulp-webp": "^4.0.1",
     "gulp-webserver": "^0.9.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.1.0",
     "workbox-build": "^5.1.4"
   }
 }
