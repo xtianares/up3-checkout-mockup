@@ -105,7 +105,8 @@ body.modal-open {
   }
 }
 .modal-body {
-  .close {
+  .btn-close {
+    padding: 0;
     opacity: 1;
     display: inline-block;
     position: absolute;
@@ -115,9 +116,12 @@ body.modal-open {
     height: 30px;
     text-align: center;
     z-index: 100;
-    background: #ffffff;
+    background-size: 12px;
     border-bottom-left-radius: .3rem;
     border-top-right-radius: .3rem;
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
 /* ----------------------------------------------------------------------------
@@ -213,7 +217,7 @@ ul.carrot > li:before { content: "\00BB"; font-family: 'icons'; margin-top: .2em
   Bootstrap Overrides
 ----------------------------------------------------------------------------- */
 // .form-control:focus,
-// .custom-select:focus {
+// .form-select:focus {
 //   box-shadow: none;
 // }
 b, strong {
@@ -245,36 +249,73 @@ input::placeholder{
 }
 .custom-control {
   &.is-invalid, &:invalid {
-    .custom-control-input ~ .custom-control-label {
+    .form-check-input ~ .form-check-label {
       color: $red;
     }
-    .custom-control-input ~ .custom-control-label:before {
+    .form-check-input ~ .form-check-label:before {
       border-color: $red;
     }
-    .custom-control-input:focus ~ .custom-control-label:before {
+    .form-check-input:focus ~ .form-check-label:before {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
     }
   }
-  &.custom-checkbox {
-    padding-left: 1.75rem;
-    .custom-control-label {
+  .custom-control-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+  }
+  &.form-check {
+    padding-left: 1.7rem;
+    .form-check-label {
+      position: relative;
       &:before,
       &:after {
-        left: -1.75rem;
+        left: -1.7rem;
         width: 1.2rem;
         height: 1.2rem;
       }
+      &:before {
+        position: absolute;
+        top: .25rem;
+        left: -1.7rem;
+        display: block;
+        pointer-events: none;
+        content: "";
+        background-color: #fff;
+        border: #adb5bd solid 1px;
+        transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        border-radius: .25rem;
+      }
+      &:after {
+        position: absolute;
+        top: .25rem;
+        left: -1.7rem;
+        display: block;
+        content: "";
+        background: 50%/50% 50% no-repeat;
+      }
     }
-    .custom-control-input:checked ~ .custom-control-label {
+    .form-check-input {
+      margin-left: -1.7rem;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    .form-check-input:checked ~ .form-check-label {
       &:before {
         border-color: $blue;
         background-color: $blue;
+      }
+      &:after {  
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
       }
     }
   }
   &.custom-radio {
     padding-left: 1.75rem;
-    .custom-control-label {
+    .form-check-label {
       &:before,
       &:after {
         left: -1.75rem;
@@ -282,7 +323,7 @@ input::placeholder{
         height: 1.2rem;
       }
     }
-    .custom-control-input:checked ~ .custom-control-label {
+    .form-check-input:checked ~ .form-check-label {
       &:before {
         border-color: $blue;
         background-color: $blue;
@@ -300,7 +341,7 @@ input::placeholder{
     background-image: none;
   }
 }
-.custom-select {
+.form-select {
   &.is-invalid {
     border-color: $red;
   }

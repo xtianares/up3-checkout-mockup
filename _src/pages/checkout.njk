@@ -7,7 +7,7 @@
 {% block MainContent %}
 
 <main class="wrap pt-0">
-  <div class="header-wrap py-2 py-md-4">
+  <div class="heading-wrap py-2 py-md-4">
     <div class="container-fluid but-fixed">
       <div class="row justify-content-center">
         <header class="col-12">
@@ -20,45 +20,46 @@
     <div class="row justify-content-center">
       <article class="col-12 col-lg-8">
         <h2 class="section-header h3 mt-3 mt-md-4 mb-2 mb-sm-4">Customer Information</h2>
-        <div class="form-row justify-content-end">
+        
+        <div class="row g-3 justify-content-end">
           <p class="col-sm-9 mb-0 mb-sm-2 mb-md-3 small">Provide the email address where you want to receive your order confirmation and receipt.</p>
         </div>
-        <div class="form-row form-group">
-          <label class="text-sm-right col-sm-3 col-form-label" for="email">Email Address</label>
+        <div class="row g-3 mb-3">
+          <label class="text-sm-end col-sm-3 col-form-label" for="email">Email Address</label>
           <div class="col-sm-8"><input class="form-control" name="email" id="email" type="email" data-hj-masked></div>
         </div>
-        <div class="form-row form-group">
-          <label class="text-sm-right col-sm-3 col-form-label" for="validate-email">Validate Email Address</label>
+        <div class="row g-3 mb-3">
+          <label class="text-sm-end col-sm-3 col-form-label" for="validate-email">Validate Email Address</label>
           <div class="col-sm-8"><input class="form-control" name="validate-email" id="validate-email" type="email" data-hj-masked></div>
         </div>
-        <div class="form-row form-group d-flex align-items-center">
-          <label class="text-sm-right col-sm-3 col-form-label"></label>
+        <div class="row g-3 mb-3 d-flex align-items-center">
+          <label class="text-sm-end col-sm-3 col-form-label"></label>
           <div class="col-sm-8">
-            <div class="custom-control custom-checkbox course-upgrade">
-              <input type="checkbox" class="custom-control-input" id="terms">
-              <label class="custom-control-label" for="terms"><span>I agree to the <strong><a href="#" data-toggle="modal" data-target="#terms-and-conditions">Terms and Conditions</a></strong></span></label>
+            <div class="custom-control form-check course-upgrade">
+              <input type="checkbox" class="form-check-input" id="terms">
+              <label class="form-check-label" for="terms"><span>I agree to the <strong><a href="#" data-bs-toggle="modal" data-bs-target="#terms-and-conditions">Terms and Conditions</a></strong></span></label>
             </div>
           </div>
         </div>
-        <div class="form-row form-group d-flex align-items-center">
-          <label class="text-sm-right col-sm-3 col-form-label" for="i-agree">Type <strong>I Agree</strong></label>
+        <div class="row g-3 mb-3 d-flex align-items-center">
+          <label class="text-sm-end col-sm-3 col-form-label" for="i-agree">Type <strong>I Agree</strong></label>
           <div class="col-sm-4"><input class="form-control" name="i-agree" id="i-agree" type="text" data-hj-masked></div>
-          <div class="col-sm-5 my-2"><a href="#" data-toggle="modal" data-target="#terms-and-conditions"><strong>View Terms and Conditions</strong></a></div>
+          <div class="col-sm-5"><a href="#" data-bs-toggle="modal" data-bs-target="#terms-and-conditions"><strong>View Terms and Conditions</strong></a></div>
         </div>
         
         <h3 class="section-header mt-4 mt-sm-4 mb-2 mb-sm-4">Billing and Payment Info</h3>
-        <div class="form-row form-group">
-          <label class="text-sm-right col-sm-3 col-form-label" for="card-name">Full Name on Card</label>
+        <div class="row g-3 mb-3">
+          <label class="text-sm-end col-sm-3 col-form-label" for="card-name">Full Name on Card</label>
           <div class="col-sm-8"><input class="form-control" name="card-name" id="card-name" type="text" data-hj-masked></div>
         </div>
-        <div class="form-row form-group">
-          <label class="text-sm-right col-sm-3 col-form-label" for="card-number">Card Number</label>
+        <div class="row g-3 mb-3">
+          <label class="text-sm-end col-sm-3 col-form-label" for="card-number">Card Number</label>
           <div class="col-sm-8"><input class="form-control" name="card-number" id="card-number" type="text" data-hj-masked></div>
         </div>
-        <div class="form-row form-group">
-          <label class="text-sm-right col-sm-3 col-form-label">Expiration Date</label>
+        <div class="row g-3 mb-3">
+          <label class="text-sm-end col-sm-3 col-form-label">Expiration Date</label>
           <div class="col-sm-8">
-            <select class="custom-select" name="expiration-month">
+            <select class="form-select float-start me-2" name="expiration-month">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -72,7 +73,7 @@
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <select class="custom-select" name="expiration-year">
+            <select class="form-select float-start" name="expiration-year">
               <option value="2021">2021</option>
               <option value="2022">2022</option>
               <option value="2023">2023</option>
@@ -86,29 +87,29 @@
             </select>
           </div>
         </div>
-        <div class="form-row form-group">
-          <label class="text-sm-right col-sm-3 col-form-label" for="card-cvv">CVV/CVC</label>
+        <div class="row g-3 mb-3">
+          <label class="text-sm-end col-sm-3 col-form-label" for="card-cvv">CVV/CVC</label>
           <div class="col-sm-8 col-md-3"><input class="form-control" name="card-cvv" id="card-cvv" type="tel" pattern="^[0-9]{3,4}$" data-hj-masked></div>
         </div>
         
-        <div class="form-row form-group btn-wrap mb-4">
-          <div class="col-sm-12 d-flex flex-column flex-md-row align-items-center">
-            <a href="/receipt/" class="checkout-btn btn btn-lg btn-success mr-md-auto order-md-3">Submit Payment</a>
+        <div class="row mb-3 btn-wrap mb-4">
+          <div class="col-sm-12 d-flex flex-column flex-md-row align-items-center justify-content-center">
+            <a href="/receipt/" class="checkout-btn btn btn-lg btn-success order-md-3">Submit Payment</a>
             <div class="alternative-payment-separator d-md-none">
               <span class="alternative-payment-separator-text">Or Pay With</span>
             </div>
-            <div class="paypal-btn-container zoid-outlet ml-md-auto order-md-1" style="max-width: 250px; height: 42px; transition: all 0.5s ease-in-out 0.3s;"><iframe style="background-color: transparent; max-width: 250px;" class="zoid-component-frame zoid-visible" allowtransparency="true" name="xcomponent__ppbutton__4__pmrhk2leei5ceytdgnsggmldmrrggirmej2gczzchirhaylzobqwyllcov2hi33oeiwcey3pnvyg63tfnz2faylsmvxhiir2pmrhezlgei5ce5dpoarh2lbcojsw4zdfojigc4tfnz2ceot3ejzgkzrchirhi33qej6syitqojxxa4zchj5se5dzobsseorcojqxoirmej3gc3dvmurdu6zcmvxhmir2ejzwc3temjxxqirmejzxi6lmmurdu6zcnrqwezlmei5cey3imvrww33voqrcyittnf5gkir2ejzgk43qn5xhg2lwmurcyitimvuwo2duei5dimrmejzwqylqmurduitsmvrxiirmejrw63dpoirduithn5wgiirmej2gcz3mnfxgkir2mzqwy43fpuwcey3pnvwws5bchj2he5lffqrhaylznvsw45bchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh2lbcn5xec5lunbxxe2l2murdu6zcl5pxi6lqmvpv6ir2ejpv6ztvnzrxi2lpnzpv6it5fqrg63sdmfxggzlmei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejxw4rlsojxxeir2pmrf6x3upfygkx27ei5cex27mz2w4y3unfxw4x27ej6syiten5wwc2loei5cey3imvrww33voqxg4zlxpfxxe23tmftgk5dzmnxxk3tdnfwc4y3pnurcyittmvzxg2lpnzeuiir2eizday3egjsgkobtmvpw22tbgzwxuyjwnz2hsirmejrhk5dun5xfgzltonuw63sjiqrduirwgu2dezbrmnstazc7nvvgcntnpjqtm3tupercyittorxxeylhmveuiir2ei4dsytcguzdczjwhfpw25drgzxgi4jwnvshcirmejwwk5dbei5hw7jmejsw4ylcnrsu4ylunf3gkq3imvrww33voqrduztbnrzwklbcmnwgszlooqrdu635fqrhg33vojrwkir2ejwwc3tvmfwcelbcobzgkztforrwqtdpm5uw4ir2mzqwy43ffqrhk4demf2gkq3mnfsw45cdn5xgm2lhovzgc5djn5xceotuoj2wklbcmnugky3ln52xivlsnerdu3tvnrwcyitbov2gqq3pmrsseorceiwceztvnzsgs3thei5hwitbnrwg653fmqrduw25fqrgi2ltmfwgy33xmvsceos3ej3gk3tnn4rf2lbcojsw2zlnmjsxezleei5fwitqmf4xaylmejosyitsmvwwk3lcmvzceot3ejpv65dzobsv6xzchirf6x3govxgg5djn5xf6xzcpv6syitpnzjgk3temvzceot3ejpv65dzobsv6xzchirf6x3govxgg5djn5xf6xzcpuwce33oinwgsy3lei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejxw4utfonuxuzjchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh2lbcnrxwgylmmurduitfnzpvkuzcfqrgy33hjrsxmzlmei5ce53bojxcelbcmf3wc2lukbxxa5lqijzgszdhmurdu6zcl5pxi6lqmvpv6ir2ejpv6ztvnzrxi2lpnzpv6it5fqrgozlukbqwozkvojwceot3ejpv65dzobsv6xzchirf6x3govxgg5djn5xf6xzcpuwce5dfon2ceot3ejqwg5djn5xceorcmnugky3ln52xiit5fqrhk2leei5cenrvhfswmnrvg5swmirmej3gk4ttnfxw4ir2ei2ce7l5fqrgg2djnrsei33nmfuw4ir2ejuhi5dqom5c6l3xo53s443bnzsge33yfzygc6lqmfwc4y3pnurcyitjmqrduirrgqygeytggfrgmzrcfqrgi33nmfuw4ir2ejuhi5dqom5c6l3dnbswg23pov2c43tfo54w64tlonqwmzlupfrw65lomnuwyltdn5wse7i__" title="PayPal" scrolling="no" allowpaymentrequest="allowpaymentrequest" src="https://www.sandbox.paypal.com/smart/button?env=sandbox&amp;style.label=checkout&amp;style.size=responsive&amp;style.height=42&amp;style.shape=rect&amp;style.color=gold&amp;style.tagline=false&amp;commit=true&amp;domain=checkout.newyorksafetycouncil.com&amp;sessionID=20cd2de83e_mja6mza6nty&amp;buttonSessionID=6542d1ce0d_mja6mza6nty&amp;storageID=89bb521e69_mtq6ndq6mdq&amp;funding.disallowed=venmo&amp;funding.remembered=paypal&amp;locale.x=en_US&amp;logLevel=warn&amp;sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9hcGkvY2hlY2tvdXQuanMifQ%3D%3D&amp;uid=659ef657ef&amp;version=4&amp;xcomponent=1" frameborder="0"></iframe></div>
+            <div class="paypal-btn-container zoid-outlet ml-md-auto order-md-1" style="max-width: 250px; height: 42px; transition: all 0.5s ease-in-out 0.3s;"><iframe style="background-color: transparent; max-width: 250px;" class="zoid-component-frame zoid-visible" allowtransparency="true" name="xcomponent__ppbutton__4__pmrhk2leei5ceytdgnsggmsdmrrggirmej2gczzchirhaylzobqwyllcov2hi33oeiwcey3pnvyg63tfnz2faylsmvxhiir2pmrhezlgei5ce5dpoarh2lbcojsw4zdfojigc4tfnz2ceot3ejzgkzrchirhi33qej6syitqojxxa4zchj5se5dzobsseorcojqxoirmej3gc3dvmurdu6zcmvxhmir2ejzwc3temjxxqirmejzxi6lmmurdu6zcnrqwezlmei5cey3imvrww33voqrcyittnf5gkir2ejzgk43qn5xhg2lwmurcyitimvuwo2duei5dimrmejzwqylqmurduitsmvrxiirmejrw63dpoirduithn5wgiirmej2gcz3mnfxgkir2mzqwy43fpuwcey3pnvwws5bchj2he5lffqrhaylznvsw45bchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh2lbcn5xec5lunbxxe2l2murdu6zcl5pxi6lqmvpv6ir2ejpv6ztvnzrxi2lpnzpv6it5fqrg63sdmfxggzlmei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejxw4rlsojxxeir2pmrf6x3upfygkx27ei5cex27mz2w4y3unfxw4x27ej6syiten5wwc2loei5cey3imvrww33voqxg4zlxpfxxe23tmftgk5dzmnxxk3tdnfwc4y3pnurcyittmvzxg2lpnzeuiir2eizday3egjsgkobtmvpw22tbgzwxuyjwnz2hsirmejrhk5dun5xfgzltonuw63sjiqrduirwgu2dezbrmnstazc7nvvgcntnpjqtm3tupercyittorxxeylhmveuiir2ei4dsytcguzdczjwhfpw25drgzxgi4jwnvshcirmejwwk5dbei5hw7jmejsw4ylcnrsu4ylunf3gkq3imvrww33voqrduztbnrzwklbcmnwgszlooqrdu635fqrhg33vojrwkir2ejwwc3tvmfwcelbcobzgkztforrwqtdpm5uw4ir2mzqwy43ffqrhk4demf2gkq3mnfsw45cdn5xgm2lhovzgc5djn5xceotuoj2wklbcmnugky3ln52xivlsnerdu3tvnrwcyitbov2gqq3pmesseorceiwceztvnzsgs3thei5hwitbnrwg653fmqrduw25fqrgi2ltmfwgy33xmvsceos3ej3gk3tnn4rf2lbcojsw2zlnmjsxezleei5fwitqmf4xaylmejosyitsmvwwk3lcmvzceot3ejpv65dzobsv6xzchirf6x3govxgg5djn5xf6xzcpv6syitpnzjgk3temvzceot3ejpv65dzobsv6xzchirf6x3govxgg5djn5xf6xzcpuwce33oinwgsy3lei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejxw4utfonuxuzjchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh2lbcnrxwgylmmurduitfnzpvkuzcfqrgy33hjrsxmzlmei5ce53bojxcelbcmf3wc2lukbxxa5lqijzgszdhmurdu6zcl5pxi6lqmvpv6ir2ejpv6ztvnzrxi2lpnzpv6it5fqrgozlukbqwozkvojwceot3ejpv65dzobsv6xzchirf6x3govxgg5djn5xf6xzcpuwce5dfon2ceot3ejqwg5djn5xceorcmnugky3ln52xiit5fqrhk2leei5cenrvhfswmnrvg5swmirmej3gk4ttnfxw4ir2ei2ce7l5fqrgg2djnrsei33nmfuw4ir2ejuhi5dqom5c6l3xo53s443bnzsge33yfzygc6lqmfwc4y3pnurcyitjmqrduirrgqygeytggfrgmzrcfqrgi33nmfuw4ir2ejuhi5dqom5c6l3dnbswg23pov2c43tfo54w64tlonqwmzlupfrw65lomnuwyltdn5wse7i__" title="PayPal" scrolling="no" allowpaymentrequest="allowpaymentrequest" src="https://www.sandbox.paypal.com/smart/button?env=sandbox&amp;style.label=checkout&amp;style.size=responsive&amp;style.height=42&amp;style.shape=rect&amp;style.color=gold&amp;style.tagline=false&amp;commit=true&amp;domain=checkout.newyorksafetycouncil.com&amp;sessionID=20cd2de83e_mja6mza6nty&amp;buttonSessionID=6542d1ce0d_mja6mza6nty&amp;storageID=89bb521e69_mtq6ndq6mdq&amp;funding.disallowed=venmo&amp;funding.remembered=paypal&amp;locale.x=en_US&amp;logLevel=warn&amp;sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9hcGkvY2hlY2tvdXQuanMifQ%3D%3D&amp;uid=659ef657ef&amp;version=4&amp;xcomponent=1" frameborder="0"></iframe></div>
             <div class="alternative-payment-separator-short mx-3 d-none d-md-block order-md-2">OR</div>
           </div>
         </div>
 
       </article>
 
-      <aside class="col-sm-10 col-md-8 col-lg-4 mt-3 mt-lg-n5">
-        <div class="card order-summary mb-3">
+      <aside id="order-summary" class="col-sm-10 col-md-8 col-lg-4 mt-3 mt-lg-n5">
+        <div class="card card-summary  order-summary mb-3">
           <div class="card-body px-3 pt-3 pb-1">
             <h5 class="card-title text-center mb-0">Order Total</h5>
-            <div class="total-amount text-center"><span class="dollar-sign">$</span>188.65</div>
+            <div class="total-amount text-center"><span class="dollar-sign">$</span>188.90</div>
             <p class="card-text small text-black-50 text-center"><em>*Shipping &amp; handling and sales tax costs are calculated based on items in your cart.</em></p>
             <ul class="list-group list-group-flush border-top">
               <li class="list-group-item">
@@ -121,7 +122,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="item-amount text-right">
+                <div class="item-amount text-end">
                   <strong>$93.95</strong>
                   <span class="item-qty-display">x <span class="item-qty">2</span></span>
                 </div>
@@ -130,7 +131,7 @@
                 <div class="item-details">
                   <strong>OSHA Education Center Association Membership</strong>
                 </div>
-                <div class="item-amount text-right">
+                <div class="item-amount text-end">
                   <strong>$49.95</strong>
                   <span class="item-qty-display">x <span class="item-qty">2</span></span>
                 </div>
@@ -147,7 +148,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="item-amount text-right">
+                <div class="item-amount text-end">
                   <strong>$46.80</strong>
                   <span class="item-qty-display">x <span class="item-qty">2</span></span>
                 </div>
@@ -156,38 +157,39 @@
                 <div class="item-details">
                   <strong>Premier Pass Customer Benefits</strong>
                 </div>
-                <div class="item-amount text-right">
+                <div class="item-amount text-end">
                   <strong>$2.95</strong>
                   <span class="item-qty-display">x <span class="item-qty">1</span></span>
                 </div>
               </li>
               <li class="list-group-item subtotal">
-                <div class="item-details order-tally text-right">Subtotal</div>
-                <div class="item-amount text-right">$193.65</div>
+                <div class="item-details order-tally text-end">Subtotal</div>
+                <div class="item-amount text-end">$193.65</div>
               </li>
               <li class="list-group-item shipping">
-                <div class="item-details order-tally text-right">Shipping & Handling</div>
-                <div class="item-amount text-right">FREE</div>
+                <div class="item-details order-tally text-end">Shipping & Handling</div>
+                <div class="item-amount text-end">FREE</div>
               </li>
               <li class="list-group-item tax">
-                <div class="item-details order-tally text-right">Tax</div>
-                <div class="item-amount text-right">$0.00</div>
+                <div class="item-details order-tally text-end">Tax</div>
+                <div class="item-amount text-end">$0.00</div>
               </li>
               <li class="list-group-item promo-code">
-                <div class="item-details order-tally text-right">Promo Code: <strong class="promo-code-details">universal</strong></div>
-                <div class="item-amount text-right">- $5.00</div>
+                <div class="item-details order-tally text-end">Promo Code: <strong class="promo-code-details">universal</strong></div>
+                <div class="item-amount text-end">- $5.00</div>
               </li>
               <li class="list-group-item total">
-                <div class="item-details order-tally text-right">Total</div>
-                <div class="item-amount text-right">$188.65</div>
+                <div class="item-details order-tally text-end">Total</div>
+                <div class="item-amount text-end">$188.65</div>
               </li>
             </ul>
           </div>
         </div>
-        <div id="promo-code-wrap" class="form-inline my-3">
+        <div id="promo-code-wrap" class="form-inline d-flex my-3">
           <input id="promo-code-input" class="form-control" type="text" placeholder="Promo Code">
           <button id="promo-code-btn" class="btn btn-outline-secondary" type="button">Apply</button>
         </div>
+        {# <a href="/checkout/" class="checkout-btn btn btn-lg btn-success w-100">Checkout Now</a> #}
       </aside>
     </div>
   </div>
@@ -200,7 +202,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-body p-4">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <h3>Terms and Conditions</h3>
         <p class="mb-0">Terms and conditions contentr goes here. This will be dynamic content that will be pulled for each PID or could be a general terms and condition.</p>
       </div>

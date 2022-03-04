@@ -76,8 +76,8 @@ const criticalCss = () => {
       penthouse: {
         include: ['#menutoggle', '.container.fluid'],
         timeout: 90000,
-        pageLoadSkipTimeout: 30000,
-        renderWaitTime: 500,
+        pageLoadSkipTimeout: 90000,
+        renderWaitTime: 100,
         blockJSRequest: true
       },
       dimensions: [{

@@ -14,7 +14,7 @@ html {
   position: relative;
   height: 100%;
   background-color: #fff;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -39,33 +39,33 @@ body {
   border-top: 1px solid #e4e4e4;
   font-size: .9rem;
   p {
-  	margin: 0 0 5px 0;
+    margin: 0 0 5px 0;
   }
   p.trustmark {
-  	display: none;
-  	margin: 0;
+    display: none;
+    margin: 0;
   }
   a {
-  	color: #999999;
+    color: #999999;
   }
   .social a {
-  	border: 0;
+    border: 0;
   }
   img {
-  	display: inline-block;
+    display: inline-block;
   }
   #trustwaveSealImage {
-  	float: left;
-  	margin: 0 10px 30px 0;
+    float: left;
+    margin: 0 10px 30px 0;
   }
   img.bbb {
-  	float: right;
-  	margin: 0 0 30px 10px;
+    float: right;
+    margin: 0 0 30px 10px;
   }
 }
 /* --------- asc styles --------- */
-#header{
-  background: rgba(255, 255, 255, 0.8);
+#header {
+  // background: rgba(255, 255, 255, 0.8);
   float: none;
   a.logo {
     float: left;
@@ -109,7 +109,7 @@ body {
     width: auto;
     p {
       float: right;
-      margin: 2px 12px 0 0;
+      margin: 2px 0 0 0;
       strong {
         font-size: 16px;
       }
@@ -164,13 +164,32 @@ body {
         font-size: 105%;
         vertical-align: top;
       }
+      &:hover {
+        margin-bottom: -1px;
+      }
+    }
+  }
+  .brand {
+    clear: right;
+    .brand-mobile {
+      font-size: .8rem;
+    }
+    .university-platform-logo {
+      max-width: 160px;
     }
   }
 }
 /* ----------------------------------------------------------------------------
     Checkout styles
 ----------------------------------------------------------------------------- */
-.header-wrap {
+#brand-wrap {
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background-color: $theme-primary;
+  color: #fff;
+  font-weight: 600;
+}
+.heading-wrap {
   background-color: #84fab0;
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   // background-image: linear-gradient(to right, rgba(67, 233, 123, 0.5), rgba(56, 249, 215, 0.5));
@@ -181,7 +200,10 @@ body {
     font-weight: 600;
   }
 }
-aside {
+#order-summary {
+  @media screen and (min-width: 992px) {
+    padding-left: 1.25rem;
+  }
   position: sticky;
 }
 #self-bulk {
@@ -305,7 +327,7 @@ aside {
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .product-details {
-      .custom-checkbox {
+      .form-check {
         label {
           color: #555;
           font-weight: normal;
@@ -319,7 +341,7 @@ aside {
       font-weight: 600;
       font-family: var(--font-family);
     }
-    .custom-checkbox {
+    .form-check {
       .h6 {
         margin: 0;
       }
@@ -334,6 +356,7 @@ aside {
     }
     .remove-btn {
       opacity: .6;
+      text-decoration: none;
       &:hover,
       &:focus {
         opacity: 1;
@@ -359,31 +382,56 @@ aside {
         margin-bottom: 0;
         border-bottom: 0;
       }
-      .add-product {
+      .add-remove-product {
         padding-left: 15px;
         padding-right: 15px;
-        min-width: 80px;
+        min-width: 55px;
         font-size: 1.1rem;
-        .add-btn {
+        .add-btn,
+        .remove-btn {
           margin-top: 5px;
           margin-bottom: 5px;
+          width: 25px;
+          height: 25px;
+          text-decoration: none;
+          border-radius: 50%;
+          background-color: transparent;
+          opacity: 1;
           &:hover,
           &:focus {
             text-decoration: none;
             border-bottom: 1px dotted inherit;
-            color:  $green !important;
           }
           &:before {
-            margin-top: 3px;
+            margin-top: 2px;
             padding-top: 3px;
             padding-bottom: 3px;
+            color: inherit;
             font-size: .75em;
             line-height: 1;
-            margin-right: 5px;
             vertical-align: top;
           }
-          .to-order {
-            display: none;
+        }
+        .add-btn {
+          border: 1px solid $success;
+          color: $success;
+          &:hover,
+          &:focus {
+            background-color: $success !important;
+            color: #fff;
+          }
+          &:before { 
+            margin-top: 3px;
+            font-size: .65em;
+          }
+        }
+        .remove-btn {
+          border: 1px solid $danger;
+          color: $danger;
+          &:hover,
+          &:focus {
+            background-color: $danger !important;
+            color: #fff !important;
           }
         }
       }
@@ -458,7 +506,12 @@ aside {
   font-size: 0.8571428571em;
 }
 
-.order-summary {
+.card-summary {
+  &.order-summary {
+    @media screen and (min-width: 992px) {
+      margin-top: -4rem;
+    }
+  }
   .item-amount {
     min-width: 90px;
   }
@@ -547,7 +600,7 @@ aside {
   }
 }
 body.bulk-order {
-  .order-summary {
+  .card-summary {
     .item-qty-display {
       display: block;
     }
@@ -568,7 +621,7 @@ body.bulk-order {
 .form-group {
   margin-bottom: .5rem;
 }
-.custom-select {
+.form-select {
   &[name="expiration-month"] {
     max-width: 100px;
   }
@@ -584,20 +637,20 @@ body.bulk-order {
 ----------------------------------------------------------------------------- */
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .card {
-    &.product {
-      &.upsell {
-        .add-product {
-          min-width: 140px;
-          .add-btn {
-            .to-order {
-              display: inline;
-            }
-          }
-        }
-      }
-    }
-  }
+  // .card {
+  //   &.product {
+  //     &.upsell {
+  //       .add-remove-product {
+  //         // min-width: 140px;
+  //         .add-btn {
+  //           .to-order {
+  //             display: inline;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   #self-bulk {
     .self-bulk-toggle {
       width: calc(50% - 5px);
@@ -607,6 +660,8 @@ body.bulk-order {
         padding-left: 3rem !important;
         small {
           display: block;
+          font-weight: 400;
+          font-size: 80%;
         }
         &:before {
           position: absolute;
@@ -638,6 +693,7 @@ body.bulk-order {
     padding-right: 30px;
   }
   #header a.logo {
+    width: 60%;
     img {
       display: block;
       float: left;
@@ -682,7 +738,7 @@ body.bulk-order {
     }
   }
   #header-wrap {
-    border-top: 3px solid $theme-primary;
+    // border-top: 3px solid $theme-primary;
     #header #support {
       display: block;
       span.phone {
