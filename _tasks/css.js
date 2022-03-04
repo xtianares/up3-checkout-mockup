@@ -72,7 +72,7 @@ const criticalCss = () => {
       base: paths.site.dest,
       inline: true,
       css: [paths.css.siteDest+'main.css', paths.css.siteDest+'bootstrap/bootstrap.min.css'],
-      minify: true,
+      // minify: true,
       penthouse: {
         include: ['#menutoggle', '.container.fluid'],
         timeout: 90000,
