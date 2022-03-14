@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Static Nunjucks Starter Template",
   "main": "gulpfile.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
     "test": "gulp -v"
   },

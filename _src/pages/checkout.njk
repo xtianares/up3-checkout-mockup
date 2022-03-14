@@ -21,18 +21,18 @@
       <article class="col-12 col-lg-8">
         <h2 class="section-header h3 mt-3 mt-md-4 mb-2 mb-sm-4">Customer Information</h2>
         
-        <div class="row g-3 justify-content-end">
-          <p class="col-sm-9 mb-0 mb-sm-2 mb-md-3 small">Provide the email address where you want to receive your order confirmation and receipt.</p>
+        <div class="row gx-3 justify-content-end">
+          <p class="col-sm-9 mb-0 mb-sm-3 mb-md-3 small">Provide the email address where you want to receive your order confirmation and receipt.</p>
         </div>
-        <div class="row g-3 mb-3">
+        <div class="row gx-3 gy-0 mb-2 mb-sm-3">
           <label class="text-sm-end col-sm-3 col-form-label" for="email">Email Address</label>
           <div class="col-sm-8"><input class="form-control" name="email" id="email" type="email" data-hj-masked></div>
         </div>
-        <div class="row g-3 mb-3">
+        <div class="row gx-3 mb-2 mb-sm-3">
           <label class="text-sm-end col-sm-3 col-form-label" for="validate-email">Validate Email Address</label>
           <div class="col-sm-8"><input class="form-control" name="validate-email" id="validate-email" type="email" data-hj-masked></div>
         </div>
-        <div class="row g-3 mb-3 d-flex align-items-center">
+        <div class="row gx-3 mb-2 mb-sm-3 d-flex align-items-center">
           <label class="text-sm-end col-sm-3 col-form-label"></label>
           <div class="col-sm-8">
             <div class="custom-control form-check course-upgrade">
@@ -41,22 +41,22 @@
             </div>
           </div>
         </div>
-        <div class="row g-3 mb-3 d-flex align-items-center">
+        <div class="row gx-3 mb-2 mb-sm-3 d-flex align-items-center">
           <label class="text-sm-end col-sm-3 col-form-label" for="i-agree">Type <strong>I Agree</strong></label>
           <div class="col-sm-4"><input class="form-control" name="i-agree" id="i-agree" type="text" data-hj-masked></div>
           <div class="col-sm-5"><a href="#" data-bs-toggle="modal" data-bs-target="#terms-and-conditions"><strong>View Terms and Conditions</strong></a></div>
         </div>
         
         <h3 class="section-header mt-4 mt-sm-4 mb-2 mb-sm-4">Billing and Payment Info</h3>
-        <div class="row g-3 mb-3">
+        <div class="row gx-3 mb-2 mb-sm-3">
           <label class="text-sm-end col-sm-3 col-form-label" for="card-name">Full Name on Card</label>
           <div class="col-sm-8"><input class="form-control" name="card-name" id="card-name" type="text" data-hj-masked></div>
         </div>
-        <div class="row g-3 mb-3">
+        <div class="row gx-3 mb-2 mb-sm-3">
           <label class="text-sm-end col-sm-3 col-form-label" for="card-number">Card Number</label>
           <div class="col-sm-8"><input class="form-control" name="card-number" id="card-number" type="text" data-hj-masked></div>
         </div>
-        <div class="row g-3 mb-3">
+        <div class="row gx-3 mb-2 mb-sm-3">
           <label class="text-sm-end col-sm-3 col-form-label">Expiration Date</label>
           <div class="col-sm-8">
             <select class="form-select float-start me-2" name="expiration-month">
@@ -87,7 +87,7 @@
             </select>
           </div>
         </div>
-        <div class="row g-3 mb-3">
+        <div class="row gx-3 mb-2 mb-sm-3">
           <label class="text-sm-end col-sm-3 col-form-label" for="card-cvv">CVV/CVC</label>
           <div class="col-sm-8 col-md-3"><input class="form-control" name="card-cvv" id="card-cvv" type="tel" pattern="^[0-9]{3,4}$" data-hj-masked></div>
         </div>
@@ -106,65 +106,79 @@
       </article>
 
       <aside id="order-summary" class="col-sm-10 col-md-8 col-lg-4 mt-3 mt-lg-n5">
-        <div class="card card-summary  order-summary mb-3">
+        <div class="card card-summary order-summary mb-3">
           <div class="card-body px-3 pt-3 pb-1">
             <h5 class="card-title text-center mb-0">Order Total</h5>
-            <div class="total-amount text-center"><span class="dollar-sign">$</span>188.90</div>
+            <div class="total-amount text-center"><span class="dollar-sign">$</span>318.77</div>
             <p class="card-text small text-black-50 text-center"><em>*Shipping &amp; handling and sales tax costs are calculated based on items in your cart.</em></p>
             <ul class="list-group list-group-flush border-top">
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>10-Hour OSHA Outreach Training Course for the Construction Industry</strong>
-                  <div class="more-details">
-                    <button class="more-details-btn btn btn-sm btn-link p-0 text-muted" type="button">Course Upgrades</button>
-                    <ul class="more-details-list">
-                      <li class="item-detail">10-Hour Construction Study Guide ($14.95)</li> 
-                    </ul>
+              <li class="list-group-item d-block">
+                <div class="item d-flex justify-content-between">
+                  <div class="item-name">
+                    <strong>10-Hour OSHA Outreach Training Course for the Construction Industry ($79.00&nbsp;x&nbsp;2)</strong>
+                  </div>
+                  <div class="item-amount text-end">
+                    <strong>$158.00</strong>
                   </div>
                 </div>
-                <div class="item-amount text-end">
-                  <strong>$93.95</strong>
-                  <span class="item-qty-display">x <span class="item-qty">2</span></span>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>OSHA Education Center Association Membership</strong>
-                </div>
-                <div class="item-amount text-end">
-                  <strong>$49.95</strong>
-                  <span class="item-qty-display">x <span class="item-qty">2</span></span>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>New York DMV Approved Defensive Driving Course</strong>
-                  <div class="more-details">
-                    <button class="more-details-btn btn btn-sm btn-link p-0 text-muted" type="button">Course Upgrades</button>
-                    <ul class="more-details-list">
-                      <li class="item-detail">Rush Certificate Processing ($4.95)</li> 
-                      <li class="item-detail">Streaming Upgrade ($9.95)</li> 
-                      <li class="item-detail">New York Defensive Driving Study Guide ($6.95)</li> 
-                    </ul>
+                <div class="item d-flex justify-content-between mt-1">
+                  <div class="item-details">10-Hour Construction Study Guide (14.95&nbsp;x&nbsp;2)</div>
+                  <div class="item-amount text-end">
+                    <strong>$29.88</strong>
                   </div>
                 </div>
-                <div class="item-amount text-end">
-                  <strong>$46.80</strong>
-                  <span class="item-qty-display">x <span class="item-qty">2</span></span>
+              </li>
+              <li class="list-group-item d-block">
+                <div class="item d-flex justify-content-between">
+                  <div class="item-name">
+                    <strong>OSHA Education Center Association Membership ($39.95&nbsp;x&nbsp;1)</strong>
+                  </div>
+                  <div class="item-amount text-end">
+                    <strong>$39.95</strong>
+                  </div>
                 </div>
               </li>
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>Premier Pass Customer Benefits</strong>
+              <li class="list-group-item d-block">
+                <div class="item d-flex justify-content-between">
+                  <div class="item-name">
+                    <strong>New York DMV Approved Defensive Driving Course ($24.95&nbsp;x&nbsp;2)</strong>
+                  </div>
+                  <div class="item-amount text-end">
+                    <strong>$49.90</strong>
+                  </div>
                 </div>
-                <div class="item-amount text-end">
-                  <strong>$2.95</strong>
-                  <span class="item-qty-display">x <span class="item-qty">1</span></span>
+                <div class="item d-flex justify-content-between mt-1">
+                  <div class="item-details">Rush Certificate Processing ($4.95&nbsp;x&nbsp;2)</div>
+                  <div class="item-amount text-end">
+                    <strong>$9.90</strong>
+                  </div>
+                </div>
+                <div class="item d-flex justify-content-between mt-1">
+                  <div class="item-details">Streaming Upgrade ($9.95&nbsp;x&nbsp;2)</div>
+                  <div class="item-amount text-end">
+                    <strong>$19.95</strong>
+                  </div>
+                </div>
+                <div class="item d-flex justify-content-between mt-1">
+                  <div class="item-details">New York Defensive Driving Study Guide ($6.95&nbsp;x&nbsp;2)</div>
+                  <div class="item-amount text-end">
+                    <strong>$13.90</strong>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-block">
+                <div class="item d-flex justify-content-between">
+                  <div class="item-name">
+                    <strong>Premier Pass Customer Benefits ($2.95&nbsp;x&nbsp;1)</strong>
+                  </div>
+                  <div class="item-amount text-end">
+                    <strong>$2.95</strong>
+                  </div>
                 </div>
               </li>
               <li class="list-group-item subtotal">
                 <div class="item-details order-tally text-end">Subtotal</div>
-                <div class="item-amount text-end">$193.65</div>
+                <div class="item-amount text-end">$323.77</div>
               </li>
               <li class="list-group-item shipping">
                 <div class="item-details order-tally text-end">Shipping & Handling</div>
@@ -178,9 +192,9 @@
                 <div class="item-details order-tally text-end">Promo Code: <strong class="promo-code-details">universal</strong></div>
                 <div class="item-amount text-end">- $5.00</div>
               </li>
-              <li class="list-group-item total">
+              <li class="list-group-item total fs-5">
                 <div class="item-details order-tally text-end">Total</div>
-                <div class="item-amount text-end">$188.65</div>
+                <div class="item-amount text-end">$318.77</div>
               </li>
             </ul>
           </div>

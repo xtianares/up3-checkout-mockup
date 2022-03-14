@@ -300,31 +300,36 @@ body {
   }
 }
 .product-qty {
-  display: none;
-}
-.product-price {
-  margin-left: auto;
+  display: block;
   padding-left: 15px;
   padding-right: 15px;
-  width: 128px;
-  font-size: 1.1rem;
+  width: 140px;
+  .qty-btn {
+    display: none;
+  }
+  .qty-input {
+    margin-left: auto !important;
+    margin-right: auto;
+    max-width: 50px;
+    border-radius: .2rem !important;
+  }
+  .qty-discount {
+    display: none;
+  }
 }
-.bulk-order {
-  .product-qty {
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 128px;
-  }
-  .product-price {
-    margin-left: 0;
-  }
+.product-price {
+  // margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 140px;
+  font-size: 1.1rem;
 }
 .card {
   &.product {
     transition: box-shadow .15s ease-in-out;
     &:hover {
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: rgba(0,0,0,.025);
+      // box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .product-details {
       .form-check {
@@ -372,8 +377,15 @@ body {
       border: 1px solid #ced4da;
     }
     .qty-btn {
-      width: 25px;
+      display: none;
+      width: 30px;
       border: 1px solid #ced4da;
+      width: 30px;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #777777;
+      line-height: 1;
     }
     &.upsell {
       .product-details {
@@ -436,6 +448,28 @@ body {
         }
       }
     }
+  }
+}
+.bulk-order {
+  .product-qty {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 138px;
+    .qty-btn {
+      display: flex;
+    }
+    .qty-input {
+      margin-left: -1px !important;
+      margin-right: 0;
+      border-radius: 0 !important;
+    }
+    .qty-discount {
+      display: block;
+    }
+  }
+  .product-price {
+    margin-left: 0;
   }
 }
 .checkout-btn {
@@ -581,9 +615,6 @@ body {
       opacity: 1;
     }
   }
-  .item-qty-display {
-    display: none;
-  }
   &.receipt {
     .item-details {
       padding-right: 5px;
@@ -596,13 +627,6 @@ body {
     .more-details-list {
       max-height: 100%;
       opacity: 1;
-    }
-  }
-}
-body.bulk-order {
-  .card-summary {
-    .item-qty-display {
-      display: block;
     }
   }
 }
@@ -716,12 +740,12 @@ body.bulk-order {
   .product-details {
     padding-bottom: 0;
     margin-bottom: 0;
-    width: calc(100% - 128px);
+    width: calc(100% - 280px);
     border-bottom: none;
   }
   .bulk-order {
     .product-details {
-      width: calc(100% - 256px);
+      width: calc(100% - 280px);
     }
   }
 

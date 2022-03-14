@@ -11,25 +11,25 @@
     <div class="container-fluid but-fixed">
       <div class="row justify-content-center">
         <header class="col-12">
-          <h1 class="mb-0">Order Details</h1>
+          <h1 class="mb-0">Cart Details</h1>
         </header>
       </div>
     </div>
   </div>
   <div class="container-fluid but-fixed">
     <div class="row justify-content-center">
-      <article class="col-12 col-lg-8">
-        <div id="self-bulk" class="border-bottom mt-4">
+      <div class="col-12 col-lg-12">
+        <div id="self-bulk" class="border-bottom mt-4 mb-3">
           <div class="d-flex flex-column flex-md-row align-items-md-center mb-3 mb-md-4">
             <div class="text-start">
-              <label class="fw-bold justify-content-start px-md-3">I'm buying for:</label>
+              <label class="fw-bold justify-content-start px-md-3 py-2">I'm buying for:</label>
             </div>
             <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between justify-content-md-start">
               <div class="self-bulk-toggle mb-2 mb-sm-0 me-md-2">
-                <input class="self-bulk-input" id="myself" type="radio" name="self-bulk" value="individual" checked />
+                <input class="self-bulk-input" id="myself" type="radio" name="self-bulk" value="myself" checked />
                 <label class="self-bulk-btn" for="myself">
-                  Myself Or An Individual
-                  <small>Personal or individual use</small>
+                  Myself (Personal Account)
+                  <small>Own personal use</small>
                 </label>
               </div>
               <div class="self-bulk-toggle">
@@ -47,247 +47,188 @@
           <div class="product-qty text-center">Quantity</div>
           <div class="product-price text-end">Price</div>
         </div>
-        <div id="product-row" class="row mt-2">
-          <div class="product-col col-12">
-            <div class="card product border-secondary mb-2">
-              <div class="card-body d-flex flex-wrap justify-content-between py-2 px-0">
-                <div class="product-details">
-                  <h3 class="product-info h5">10-Hour OSHA Outreach Training Course for the Construction Industry</h3>
-                  <h6 class="small text-muted my-2">Add Course Upgrades:</h6>
-                  <div class="custom-control form-check course-upgrade">
-                    <input class="form-check-input" type="checkbox" id="customCheck10">
-                    <label class="form-check-label" for="customCheck10">
-                      10-Hour Construction Study Guide ($14.95)
-                      <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-10">?</a>
-                    </label>
-                  </div>
-                  <div class="custom-control form-check course-upgrade">
-                    <input class="form-check-input" type="checkbox" name="test" id="customCheck11">
-                    <label class="form-check-label" for="customCheck11">
-                      OSHA Education Center Association Membership ($49.95)
-                      <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a>
-                    </label>
-                  </div>
-                </div>
-                <div class="product-qty text-center ms-auto">
-                  {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
-                  <div class="input-group">
-                    <button class="qty-btn btn btn-sm btn-light" type="button">-</button>
-                    <input class="qty-input form-control form-control-sm" name="qty-10" type="number" value="1" min="1" />
-                    <button class="qty-btn btn btn-sm btn-light" type="button">+</button>
-                  </div>
-                  <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
-                </div>
-                <div class="product-price d-flex flex-wrap justify-content-end text-end">
-                  <span class="price-display">$79.00</span>
-                  <button class="remove-btn btn btn-sm btn-link text-reset p-0 mt-auto icon-close" type="button">Remove</button>
-                </div>
+        <div class="card product border-secondary mb-2">
+          <div class="card-body d-flex flex-wrap justify-content-between py-2 px-0">
+            <div class="product-details">
+              <h3 class="product-info h4">10-Hour OSHA Outreach Training Course for the Construction Industry ($79.00)</h3>
+              <h6 class="small text-muted my-2">Add Course Upgrades:</h6>
+              <div class="custom-control form-check course-upgrade">
+                <input class="form-check-input" type="checkbox" id="customCheck10">
+                <label class="form-check-label" for="customCheck10">
+                  10-Hour Construction Study Guide ($14.95)
+                  <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-10">?</a>
+                </label>
+              </div>
+              <div class="custom-control form-check course-upgrade">
+                <input class="form-check-input" type="checkbox" name="test" id="customCheck11">
+                <label class="form-check-label" for="customCheck11">
+                  OSHA Education Center Association Membership ($39.95)
+                  <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a>
+                </label>
               </div>
             </div>
-            <div class="card product border-secondary mb-2">
-              <div class="card-body d-flex flex-wrap justify-content-between py-2 px-0">
-                <div class="product-details">
-                  <h3 class="product-info h5">OSHA Education Center Association Membership <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a></h3>
-                </div>
-                <div class="product-qty text-center ms-auto">
-                  {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
-                  <div class="input-group">
-                    <button class="qty-btn btn btn-sm btn-light" type="button">-</button>
-                    <input class="qty-input form-control form-control-sm" name="qty-11" type="number" value="1" min="1" />
-                    <button class="qty-btn btn btn-sm btn-light" type="button">+</button>
-                  </div>
-                  <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
-                </div>
-                <div class="product-price d-flex flex-wrap justify-content-end text-end">
-                  <span class="price-display">$49.95</span>
-                  <button class="remove-btn btn btn-sm btn-link text-reset p-0 mt-auto icon-close" type="button">Remove</button>
-                </div>
+            <div class="product-qty text-center ms-auto ms-lg-0">
+              {# <div class="qty-label small fw-lighter text-muted d-block d-md-none mb-1">Quantity</div> #}
+              <div class="input-group">
+                <button class="qty-btn btn btn-sm btn-light" type="button">&#8722;</button>
+                <input class="qty-input form-control form-control-sm" name="qty-10" type="number" value="1" min="1" disabled />
+                <button class="qty-btn btn btn-sm btn-light" type="button">&#43;</button>
               </div>
+              <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
             </div>
-            <div class="card product border-secondary mb-2">
-              <div class="card-body d-flex flex-wrap justify-content-between py-2 px-0">
-                <div class="product-details">
-                  <h3 class="product-info h5">New York DMV Approved Defensive Driving Course</h3>
-                  <h6 class="small text-muted my-2">Add Course Upgrades:</h6>
-                  <div class="custom-control form-check course-upgrade">
-                    <input type="checkbox" class="form-check-input" id="customCheck20">
-                    <label class="form-check-label" for="customCheck20">
-                      Rush Certificate Processing ($4.95)
-                      <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-20">?</a>
-                    </label>
-                  </div>
-                  <div class="custom-control form-check course-upgrade">
-                    <input type="checkbox" class="form-check-input" id="customCheck21">
-                    <label class="form-check-label" for="customCheck21">
-                      Streaming Upgrade ($9.95)
-                      <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-21">?</a>
-                    </label>
-                  </div>
-                  <div class="custom-control form-check course-upgrade">
-                    <input type="checkbox" class="form-check-input" id="customCheck22">
-                    <label class="form-check-label" for="customCheck22">
-                      Audio Read-Along Upgrade ($4.95)
-                      <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-22">?</a>
-                    </label>
-                  </div>
-                  <div class="custom-control form-check course-upgrade">
-                    <input type="checkbox" class="form-check-input" id="customCheck23">
-                    <label class="form-check-label" for="customCheck23">
-                      New York Defensive Driving Study Guide ($6.95)
-                      <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-23">?</a>
-                    </label>
-                  </div>
-                </div>
-                <div class="product-qty text-center ms-auto">
-                  {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
-                  <div class="input-group">
-                    <button class="qty-btn btn btn-sm btn-light" type="button">-</button>
-                    <input class="qty-input form-control form-control-sm" name="qty-20" type="number" value="1" min="1" />
-                    <button class="qty-btn btn btn-sm btn-light" type="button">+</button>
-                  </div>
-                  <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
-                </div>
-                <div class="product-price d-flex flex-wrap justify-content-end text-end">
-                  <span class="price-display">$24.95</span>
-                  <button class="remove-btn btn btn-sm btn-link text-reset p-0 mt-auto icon-close" type="button">Remove</button>
-                </div>
-              </div>
+            <div class="product-price d-flex flex-wrap justify-content-end text-end">
+              {# <div class="price-label small fw-lighter text-muted d-block d-md-none mb-0">Price</div> #}
+              <span class="price-display">$79.00</span>
+              <button class="remove-btn btn btn-sm btn-link text-reset p-0 mt-auto icon-close" type="button">Remove</button>
             </div>
-            <h3 class="h5 mt-4 px-3">Customers Also Purchased</h3>
-            {# <div class="card product upsell mb-2">
-              <div class="card-body d-flex justify-content-between py-2 px-0">
-                <div class="product-details">
-                  <h3 class="product-info h5">OSHA Education Center Association Membership ($49.95) <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a></h3>
-                </div>
-                <div class="add-remove-product d-flex justify-content-end">
-                  <button class="add-btn icon-plus p-0" type="button"></button>
-                </div>
-              </div>
-            </div> #}
-            <div class="card product mb-2">
-              <div class="product-body py-2 px-3">
-                <div class="row d-flex justify-content-between">
-                  <div class="product-info col-8">
-                    <div class="custom-control form-check mb-0">
-                      <input type="checkbox" class="form-check-input" id="customCheck31">
-                      <label class="form-check-label" for="customCheck31">
-                        OSHA Education Center Association Membership
-                        <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="product-price col-2 text-end">$49.95</div>
-                </div>
-              </div>
-            </div>
-
-            <h3 class="h5 mt-4 px-3">Add Order Upgrade</h3>
-            {# <div class="card product upsell mb-2">
-              <div class="card-body d-flex justify-content-between py-2 px-0">
-                <div class="product-details">
-                  <h3 class="product-info h5">Premier Pass Customer Benefits ($2.95) <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-30">?</a></h3>
-                </div>
-                <div class="add-remove-product d-flex justify-content-end">
-                  <button class="remove-btn icon-close p-0" type="button"></button>
-                </div>
-              </div>
-            </div> #}
-            <div class="card product mb-2">
-              <div class="product-body py-2 px-3">
-                <div class="row d-flex justify-content-between">
-                  <div class="product-info col-8">
-                    <div class="custom-control form-check mb-0">
-                      <input type="checkbox" class="form-check-input" id="customCheck30">
-                      <label class="form-check-label" for="customCheck30">
-                        Premier Pass customer benefits
-                        <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-30">?</a>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="product-price col-2 text-end">$2.95</div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </article>
+        <div class="card product border-secondary mb-2">
+          <div class="card-body d-flex flex-wrap justify-content-between py-2 px-0">
+            <div class="product-details">
+              <h3 class="product-info h4">OSHA Education Center Association Membership ($39.95)&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a></h3>
+            </div>
+            <div class="product-qty text-center ms-auto ms-lg-0">
+              {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
+              <div class="input-group">
+                <button class="qty-btn btn btn-sm btn-light" type="button">&#8722;</button>
+                <input class="qty-input form-control form-control-sm" name="qty-11" type="number" value="1" min="1" disabled />
+                <button class="qty-btn btn btn-sm btn-light" type="button">&#43;</button>
+              </div>
+              <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
+            </div>
+            <div class="product-price d-flex flex-wrap justify-content-end text-end">
+              <span class="price-display">$39.95</span>
+              <button class="remove-btn btn btn-sm btn-link text-reset p-0 mt-auto icon-close" type="button">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="card product border-secondary mb-2">
+          <div class="card-body d-flex flex-wrap justify-content-between py-2 px-0">
+            <div class="product-details">
+              <h3 class="product-info h4">New York DMV Approved Defensive Driving Course ($24.95)</h3>
+              <h6 class="small text-muted my-2">Add Course Upgrades:</h6>
+              <div class="custom-control form-check course-upgrade">
+                <input type="checkbox" class="form-check-input" id="customCheck20">
+                <label class="form-check-label" for="customCheck20">
+                  Rush Certificate Processing ($4.95)&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-20">?</a>
+                </label>
+              </div>
+              <div class="custom-control form-check course-upgrade">
+                <input type="checkbox" class="form-check-input" id="customCheck21">
+                <label class="form-check-label" for="customCheck21">
+                  Streaming Upgrade ($9.95)&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-21">?</a>
+                </label>
+              </div>
+              <div class="custom-control form-check course-upgrade">
+                <input type="checkbox" class="form-check-input" id="customCheck22">
+                <label class="form-check-label" for="customCheck22">
+                  Audio Read-Along Upgrade ($4.95)&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-22">?</a>
+                </label>
+              </div>
+              <div class="custom-control form-check course-upgrade">
+                <input type="checkbox" class="form-check-input" id="customCheck23">
+                <label class="form-check-label" for="customCheck23">
+                  New York Defensive Driving Study Guide ($6.95)&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-23">?</a>
+                </label>
+              </div>
+            </div>
+            <div class="product-qty text-center ms-auto ms-lg-0">
+              {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
+              <div class="input-group">
+                <button class="qty-btn btn btn-sm btn-light" type="button">&#8722;</button>
+                <input class="qty-input form-control form-control-sm" name="qty-20" type="number" value="1" min="1" disabled />
+                <button class="qty-btn btn btn-sm btn-light" type="button">&#43;</button>
+              </div>
+              <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
+            </div>
+            <div class="product-price d-flex flex-wrap justify-content-end text-end">
+              <span class="price-display">$24.95</span>
+              <button class="remove-btn btn btn-sm btn-link text-reset p-0 mt-auto icon-close" type="button">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 pe-lg-4">
+        <h3 class="h5 mt-4 px-3">Customers Also Purchased</h3>
+        {# <div class="card product upsell mb-2">
+          <div class="card-body d-flex justify-content-between py-2 px-0">
+            <div class="product-details">
+              <h3 class="product-info h5">OSHA Education Center Association Membership ($39.95)&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a></h3>
+            </div>
+            <div class="add-remove-product d-flex justify-content-end">
+              <button class="add-btn icon-plus p-0" type="button"></button>
+            </div>
+          </div>
+        </div> #}
+        <div class="card product mb-2">
+          <div class="product-body upsell py-2 px-3">
+            <div class="row d-flex justify-content-between">
+              <div class="product-info col-8 col-sm-9">
+                <div class="custom-control form-check mb-0">
+                  <input type="checkbox" class="form-check-input" id="customCheck31">
+                  <label class="form-check-label" for="customCheck31">
+                    OSHA Education Center Association Membership&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-11">?</a>
+                  </label>
+                </div>
+              </div>
+              <div class="product-price col-2 w-auto text-end">$39.95</div>
+            </div>
+          </div>
+        </div>
 
-      <aside id="order-summary" class="col-sm-10 col-md-8 col-lg-4 mt-3 mt-lg-n5">
-        <div class="card card-summary order-summary mb-3">
-          <div class="card-body px-3 pt-3 pb-1">
-            <h5 class="card-title text-center mb-0">Order Total</h5>
-            <div class="total-amount text-center"><span class="dollar-sign">$</span>188.90</div>
-            <p class="card-text small text-black-50 text-center"><em>*Shipping &amp; handling and sales tax costs are calculated based on items in your cart.</em></p>
-            <ul class="list-group list-group-flush border-top">
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>10-Hour OSHA Outreach Training Course for the Construction Industry</strong>
-                  <div class="more-details">
-                    <button class="more-details-btn btn btn-sm btn-link p-0 text-muted" type="button">Course Upgrades</button>
-                    <ul class="more-details-list">
-                      <li class="item-detail">10-Hour Construction Study Guide ($14.95)</li> 
-                    </ul>
-                  </div>
+        <h3 class="h5 mt-4 px-3">Add Order Upgrade</h3>
+        {# <div class="card product upsell mb-2">
+          <div class="card-body d-flex justify-content-between py-2 px-0">
+            <div class="product-details">
+              <h3 class="product-info h5">Premier Pass Customer Benefits ($2.95) <a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-30">?</a></h3>
+            </div>
+            <div class="add-remove-product d-flex justify-content-end">
+              <button class="remove-btn icon-close p-0" type="button"></button>
+            </div>
+          </div>
+        </div> #}
+        <div class="card product mb-2">
+          <div class="product-body py-2 px-3">
+            <div class="row d-flex justify-content-between">
+              <div class="product-info col-8 col-sm-9">
+                <div class="custom-control form-check mb-0">
+                  <input type="checkbox" class="form-check-input" id="customCheck30">
+                  <label class="form-check-label" for="customCheck30">
+                    Premier Pass customer benefits&nbsp;<a class="upsell-desc-trigger" href="#" data-bs-toggle="modal" data-bs-target="#desc-30">?</a>
+                  </label>
                 </div>
-                <div class="item-amount text-end">
-                  <strong>$93.95</strong>
-                  <span class="item-qty-display">x <span class="item-qty">2</span></span>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>OSHA Education Center Association Membership</strong>
-                </div>
-                <div class="item-amount text-end">
-                  <strong>$49.95</strong>
-                  <span class="item-qty-display">x <span class="item-qty">2</span></span>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>New York DMV Approved Defensive Driving Course</strong>
-                  <div class="more-details">
-                    <button class="more-details-btn btn btn-sm btn-link p-0 text-muted" type="button">Course Upgrades</button>
-                    <ul class="more-details-list">
-                      <li class="item-detail">Rush Certificate Processing ($4.95)</li> 
-                      <li class="item-detail">Streaming Upgrade ($9.95)</li> 
-                      <li class="item-detail">New York Defensive Driving Study Guide ($6.95)</li> 
-                    </ul>
-                  </div>
-                </div>
-                <div class="item-amount text-end">
-                  <strong>$46.80</strong>
-                  <span class="item-qty-display">x <span class="item-qty">2</span></span>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="item-details">
-                  <strong>Premier Pass Customer Benefits</strong>
-                </div>
-                <div class="item-amount text-end">
-                  <strong>$2.95</strong>
-                  <span class="item-qty-display">x <span class="item-qty">1</span></span>
-                </div>
-              </li>
-              <li class="list-group-item subtotal">
-                <div class="item-details order-tally text-end">Subtotal</div>
+              </div>
+              <div class="product-price col-2 w-auto text-end">$2.95</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="col-sm-10 col-md-8 col-lg-4 mt-3">
+        <div class="card card-summary cart-summary mb-3 rounded-0 border-0 border-top border-bottom">
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item subtotal px-3">
+                <div class="item-details order-tally">Subtotal</div>
                 <div class="item-amount text-end">$193.65</div>
               </li>
-              <li class="list-group-item shipping">
-                <div class="item-details order-tally text-end">Shipping & Handling</div>
+              <li class="list-group-item shipping px-3">
+                <div class="item-details order-tally">Shipping & Handling</div>
                 <div class="item-amount text-end">FREE</div>
               </li>
-              <li class="list-group-item tax">
-                <div class="item-details order-tally text-end">Tax</div>
+              <li class="list-group-item tax px-3">
+                <div class="item-details order-tally">Tax</div>
                 <div class="item-amount text-end">$0.00</div>
               </li>
-              <li class="list-group-item promo-code">
-                <div class="item-details order-tally text-end">Promo Code: <strong class="promo-code-details">universal</strong></div>
+              <li class="list-group-item promo-code px-3">
+                <div class="item-details order-tally">Promo Code: <strong class="promo-code-details">universal</strong></div>
                 <div class="item-amount text-end">- $5.00</div>
               </li>
-              <li class="list-group-item total">
-                <div class="item-details order-tally text-end">Total</div>
+              <li class="list-group-item total px-3 fs-5">
+                <div class="item-details order-tally">Total</div>
                 <div class="item-amount text-end">$188.65</div>
               </li>
             </ul>
@@ -299,6 +240,7 @@
         </div>
         <a href="/checkout/" class="checkout-btn btn btn-lg btn-success w-100">Checkout Now</a>
       </aside>
+
     </div>
   </div>
 </main>
@@ -424,6 +366,7 @@
   const selfBulkToggle = document.getElementsByName('self-bulk');
   const bodyTag = document.getElementsByTagName("body");
   const bulkOrderClass = "bulk-order";
+  const qtyInputs = document.querySelectorAll(".product-qty .input-group .qty-input");
 
   const checkedToggle = () => {
     for (let radioToggle of selfBulkToggle) {
@@ -435,11 +378,18 @@
   const toggleBulk = target => {
     if ( target.value === "bulk" ) {
       bodyTag[0].classList.add(bulkOrderClass);
-      sessionStorage.setItem("orderType", "bulk")
+      sessionStorage.setItem("orderType", "bulk");
+      for (let qtyInput of qtyInputs) {
+        qtyInput.disabled = false;
+      }
     }
     else {
       bodyTag[0].classList.remove(bulkOrderClass);
-      sessionStorage.setItem("orderType", "individual")
+      sessionStorage.setItem("orderType", "myself");
+      for (let qtyInput of qtyInputs) {
+        qtyInput.disabled = true;
+        qtyInput.value = 1;
+      }
     }
   } 
   toggleBulk(checkedToggle());
