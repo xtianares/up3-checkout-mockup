@@ -3,7 +3,7 @@ module.exports =  {
   newer           : require('gulp-newer'),
   imagemin        : require('gulp-imagemin'),
   htmlmin         : require('gulp-htmlmin'),
-  sass            : require('gulp-sass'),
+  sass            : require('gulp-sass')(require('node-sass')),
   autoprefixer    : require('gulp-autoprefixer'),
   cleancss        : require('gulp-clean-css'),
   sourcemaps      : require('gulp-sourcemaps'),

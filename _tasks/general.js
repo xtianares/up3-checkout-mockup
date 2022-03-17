@@ -109,7 +109,7 @@ const webServer = () => {
   return gulp.src(paths.site.dest)
     .pipe(plugin.webserver({
       //https: true,
-      port: 8001,
+      port: 8002,
       livereload: true,
       open: true
     }));
