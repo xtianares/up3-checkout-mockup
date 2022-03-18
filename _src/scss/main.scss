@@ -304,17 +304,11 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   width: 140px;
-  .qty-btn {
-    display: none;
-  }
   .qty-input {
-    margin-left: auto !important;
-    margin-right: auto;
-    max-width: 50px;
-    border-radius: .2rem !important;
+    margin-left: -1px !important;
   }
   .qty-discount {
-    display: none;
+    display: block;
   }
 }
 .product-price {
@@ -377,7 +371,6 @@ body {
       border: 1px solid #ced4da;
     }
     .qty-btn {
-      display: none;
       width: 30px;
       border: 1px solid #ced4da;
       width: 30px;
@@ -448,28 +441,6 @@ body {
         }
       }
     }
-  }
-}
-.bulk-order {
-  .product-qty {
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 138px;
-    .qty-btn {
-      display: flex;
-    }
-    .qty-input {
-      margin-left: -1px !important;
-      margin-right: 0;
-      border-radius: 0 !important;
-    }
-    .qty-discount {
-      display: block;
-    }
-  }
-  .product-price {
-    margin-left: 0;
   }
 }
 .checkout-btn {

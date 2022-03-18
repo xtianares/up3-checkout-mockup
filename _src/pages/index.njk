@@ -18,8 +18,8 @@
   </div>
   <div class="container-fluid but-fixed">
     <div class="row justify-content-center">
-      <div class="col-12 col-lg-12">
-        <div id="self-bulk" class="border-bottom mt-4 mb-3">
+      <div class="col-12 col-lg-12 pt-3">
+        {# <div id="self-bulk" class="border-bottom mt-4 mb-3">
           <div class="d-flex flex-column flex-md-row align-items-md-center mb-3 mb-md-4">
             <div class="text-start">
               <label class="fw-bold justify-content-start px-md-3 py-2">I'm buying for:</label>
@@ -41,8 +41,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="items-header" class="row d-none d-md-flex justify-content-between mt-3 px-3 fw-bold text-muted">
+        </div> #}
+        {# default to regular cart #}
+        <div id="items-header" class="row d-none d-md-flex justify-content-between px-3 fw-bold text-muted">
           <div class="product-details">Product Name</div>
           <div class="product-qty text-center">Quantity</div>
           <div class="product-price text-end">Price</div>
@@ -71,7 +72,7 @@
               {# <div class="qty-label small fw-lighter text-muted d-block d-md-none mb-1">Quantity</div> #}
               <div class="input-group">
                 <button class="qty-btn btn btn-sm btn-light" type="button">&#8722;</button>
-                <input class="qty-input form-control form-control-sm" name="qty-10" type="number" value="1" min="1" disabled />
+                <input class="qty-input form-control form-control-sm" name="qty-10" type="number" value="1" min="1" />
                 <button class="qty-btn btn btn-sm btn-light" type="button">&#43;</button>
               </div>
               <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
@@ -92,7 +93,7 @@
               {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
               <div class="input-group">
                 <button class="qty-btn btn btn-sm btn-light" type="button">&#8722;</button>
-                <input class="qty-input form-control form-control-sm" name="qty-11" type="number" value="1" min="1" disabled />
+                <input class="qty-input form-control form-control-sm" name="qty-11" type="number" value="1" min="1" />
                 <button class="qty-btn btn btn-sm btn-light" type="button">&#43;</button>
               </div>
               <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
@@ -137,7 +138,7 @@
               {# <div class="qty-label small text-muted d-block d-md-none mb-1">Quantity</div> #}
               <div class="input-group">
                 <button class="qty-btn btn btn-sm btn-light" type="button">&#8722;</button>
-                <input class="qty-input form-control form-control-sm" name="qty-20" type="number" value="1" min="1" disabled />
+                <input class="qty-input form-control form-control-sm" name="qty-20" type="number" value="1" min="1" />
                 <button class="qty-btn btn btn-sm btn-light" type="button">&#43;</button>
               </div>
               <div class="qty-discount small text-muted mt-1"><a class="text-reset" href="#" data-bs-toggle="modal" data-bs-target="#desc-40">Discount<span class="upsell-desc-trigger">?</span></a></div>
@@ -361,65 +362,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  const selfBulkToggle = document.getElementsByName('self-bulk');
-  const bodyTag = document.getElementsByTagName("body");
-  const bulkOrderClass = "bulk-order";
-  const qtyInputs = document.querySelectorAll(".product-qty .input-group .qty-input");
-
-  const checkedToggle = () => {
-    for (let radioToggle of selfBulkToggle) {
-      if (radioToggle.checked) {
-        return radioToggle;
-      }
-    }
-  }
-  const toggleBulk = target => {
-    if ( target.value === "bulk" ) {
-      bodyTag[0].classList.add(bulkOrderClass);
-      sessionStorage.setItem("orderType", "bulk");
-      for (let qtyInput of qtyInputs) {
-        qtyInput.disabled = false;
-      }
-    }
-    else {
-      bodyTag[0].classList.remove(bulkOrderClass);
-      sessionStorage.setItem("orderType", "myself");
-      for (let qtyInput of qtyInputs) {
-        qtyInput.disabled = true;
-        qtyInput.value = 1;
-      }
-    }
-  } 
-  toggleBulk(checkedToggle());
-
-  for (let radioToggle of selfBulkToggle) {
-    radioToggle.addEventListener('change', function(event) {
-      toggleBulk(event.target)
-    })
-  }
-
-  if ( sessionStorage.getItem("orderType") === "bulk" ) {
-    bodyTag[0].classList.add(bulkOrderClass);
-  }
-  else {
-    bodyTag[0].classList.remove(bulkOrderClass);
-  }
-  // More details toggle
-  const itemDetailsClass = "is-open";
-  const moreDetailsToggleCollection = document.querySelectorAll(".item-details .more-details-btn");
-  for (let moreDetailsToggle of moreDetailsToggleCollection) {
-    moreDetailsToggle.addEventListener('click', function() {
-      const moreDetailsToggleWrap = moreDetailsToggle.closest(".more-details");
-      const moreDetailsWrap = moreDetailsToggleWrap.querySelector(".more-details-list");
-      const moreDetailsBtn = moreDetailsToggleWrap.querySelector(".more-details-btn");
-      moreDetailsWrap.classList.toggle(itemDetailsClass)
-      moreDetailsBtn.classList.toggle(itemDetailsClass)
-    })
-  }
-
-</script>
 
 {% endblock %}
 
